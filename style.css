@@ -130,13 +130,20 @@ body {
 .content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
 }
-.content img{
+.content #bust{
   border: 3px solid;
   padding: 5px;
   margin-left:0;
+  align-self: flex-start;
+}
+.content #bust2{
+  border: 3px solid;
+  padding: 5px;
+  margin-left:0;
+  align-self: flex-end;
 }
 /* Very light scaling for our illustration */
 .title {
