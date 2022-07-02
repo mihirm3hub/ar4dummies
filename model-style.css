@@ -62,6 +62,16 @@
   height:50px;
   border:none;
   cursor:pointer;
+    transition: top 200ms ease,transform 200ms ease;
+    transition-property: box-shadow, transform;
+    transition-duration: 200ms, 200ms;
+    transition-timing-function: ease, ease;
+    transition-delay: 0s, 0s;
+}
+#qrBtn:hover {
+  box-shadow: 5px 5px;
+  font-weight: bold;
+   top: -10px;
 }
 #ar-button:active {
   background-color: #E8EAED;

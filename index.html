@@ -67,26 +67,24 @@
           title="Click the image!"
         />
         <div id="bust2">
-        <model-viewer
-          
-          bounds="tight"
-          enable-pan
-          src="https://cdn.glitch.global/5071cd64-d9ab-4d35-9f8c-a1da345381fe/scene%20(1).glb"
-          ar
-          ar-modes="webxr scene-viewer quick-look"
-          camera-controls
-          environment-image="neutral"
-          poster="poster.webp"
-          shadow-intensity="1"
-          autoplay
-        >
-          <div class="progress-bar hide" slot="progress-bar">
-            <div class="update-bar"></div>
-          </div>
-          <button slot="ar-button" id="ar-button">View in your space</button>
-          <button id="qrBtn"></button>
-        </model-viewer>
-</div>
+          <model-viewer
+            bounds="tight"
+            enable-pan
+            src="https://cdn.glitch.global/5071cd64-d9ab-4d35-9f8c-a1da345381fe/scene%20(1).glb"
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            environment-image="neutral"
+            shadow-intensity="1"
+            autoplay
+          >
+            <div class="progress-bar hide" slot="progress-bar">
+              <div class="update-bar"></div>
+            </div>
+            <button slot="ar-button" id="ar-button">View in your space</button>
+            <button id="qrBtn"></button>
+          </model-viewer>
+        </div>
         <!-- Instructions on using this project -->
         <div class="instructions">
           <h2>Using this project</h2>
