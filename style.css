@@ -142,7 +142,7 @@ body {
 .content #bust2{
   border: 3px solid;
   padding: 5px;
-  margin-left:0;
+  margin-top:10px;
   align-self: flex-end;
 }
 /* Very light scaling for our illustration */
@@ -154,6 +154,16 @@ body {
   font-size: 8vw;
   line-height: 105%;
   margin: 0;
+}
+
+model-viewer {
+  width: 50%;
+  min-width:300px;
+  height: 40vh;
+  background-color: #b79eb1;  
+  border: 3px solid;
+  padding: 10px;
+   align-self: flex-end;
 }
 
 /* Very light scaling for our illustration */
