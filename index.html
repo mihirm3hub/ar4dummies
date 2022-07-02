@@ -40,7 +40,7 @@
 
     <!-- Import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css" />
-
+    <link rel="stylesheet" href="/model-style.css" />
     <!-- Import the webpage's javascript file -->
     <script src="/script.js" defer></script>
   </head>
@@ -59,31 +59,44 @@
         <!-- This is the start of content for our page -->
         <h1 class="title">Web AR for Dummies 😮</h1>
 
-        <img id="bust"
+        <img
+          id="bust"
           src="https://media.giphy.com/media/YOlV0TjEfVsm3JSKNW/giphy.gif"
           class="illustration"
           alt="Editor illustration"
           title="Click the image!"
         />
-         <img id="bust2"
-          src="https://media.giphy.com/media/YOlV0TjEfVsm3JSKNW/giphy.gif"
-          class="illustration"
-          alt="Editor illustration"
-          title="Click the image!"
-        />
+        <model-viewer
+          id="bust2"
+          bounds="tight"
+          enable-pan
+          src="https://cdn.glitch.global/5071cd64-d9ab-4d35-9f8c-a1da345381fe/scene%20(1).glb"
+          ar
+          ar-modes="webxr scene-viewer quick-look"
+          camera-controls
+          environment-image="neutral"
+          poster="poster.webp"
+          shadow-intensity="1"
+          autoplay
+        >
+          <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+          </div>
+          <button slot="ar-button" id="ar-button">View in your space</button>
+          <button id="qrBtn"></button>
+        </model-viewer>
+
         <div></div>
         <!-- Instructions on using this project -->
         <div class="instructions">
-          <h2>
-            Using this project
-          </h2>
+          <h2>Using this project</h2>
           <p>
             This is the Glitch <strong>Hello Website</strong> project. You can
             use it to build your own site. Check out README.md in the editor for
             more info and next steps you can take!
           </p>
           <!-- ADD BUTTON HERE -->
-          
+
           <!-- Once you've added the button from the readme, click it in the page -->
           <!-- Check out the function in script.js to see how it works -->
         </div>
@@ -92,13 +105,14 @@
     <!-- The footer holds our remix button — you can use it for structure or cut it out ✂ -->
     <footer class="footer">
       <div class="links"></div>
-      <a
-        class="btn--remix"
-        target="_top"
-        href="https://linktr.ee/ambrielm3"
-      >
+      <a class="btn--remix" target="_top" href="https://linktr.ee/ambrielm3">
         🕹️&lt;DEV&gt;
       </a>
     </footer>
+    <!-- Import the component -->
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
   </body>
 </html>
