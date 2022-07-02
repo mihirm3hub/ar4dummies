@@ -18,7 +18,7 @@ to this section's matching END comment to see page-specific styles.
 :root {
   --color-bg: #69F7BE;
   --color-text-main: #000000;
-  --color-primary: #FFFF00;
+  --color-primary: #ffc83d;
   --wrapper-height: 87vh;
   --image-max-width: 300px;
   --image-margin: 3rem;
@@ -83,7 +83,11 @@ to this section's matching END comment to see page-specific styles.
   flex-wrap: wrap;
   border-top: 4px solid #fff;
 }
+a{
+  border: 3px solid;
+  padding: 10px;
 
+}
 .footer a:not(.btn--remix):link,
 a:not(.btn--remix):visited {
   font-family: HK Grotesk;
@@ -92,10 +96,11 @@ a:not(.btn--remix):visited {
   font-size: 1.1rem;
   color: #000;
   text-decoration: none;
-  border-style: none;
 }
 .footer a:hover {
-  background: var(--color-primary);
+  background: var(--color-primary);  
+  box-shadow: 5px 10px;
+  font-weight: bold;
 }
 
 .footer .links {
