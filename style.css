@@ -46,10 +46,15 @@ to this section's matching END comment to see page-specific styles.
   src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
     format("opentype");
 }
-
+@font-face {
+  font-family: aglet-mono;
+  font-weight: regular;
+  src: url("https://cdn.glitch.global/5071cd64-d9ab-4d35-9f8c-a1da345381fe/Aglet_Mono_Regular.woff2?v=1657112374241")
+    format("opentype");
+}
 /* Our remix on glitch button */
 .btn--remix {
-  font-family: HK Grotesk;
+  font-family: aglet-mono;
   padding: 0.75rem 1rem;
   font-size: 1.1rem;
   line-height: 1rem;
@@ -90,7 +95,7 @@ a{
 }
 .footer a:not(.btn--remix):link,
 a:not(.btn--remix):visited {
-  font-family: HK Grotesk;
+  font-family: aglet-mono;
   font-style: normal;
   font-weight: normal;
   font-size: 1.1rem;
@@ -116,7 +121,7 @@ END Glitch hello-app default styles
 ******************************************************************************/
 
 body {
-  font-family: HK Grotesk;
+  font-family: aglet-mono;
   background-color: var(--color-bg);
 }
 
@@ -148,9 +153,9 @@ body {
 /* Very light scaling for our illustration */
 .title {
   color: #2800FF;
-  font-family: HK Grotesk;
+  font-family: aglet-mono;
   font-style: normal;
-  font-weight: bold;
+  font-weight: bolder;
   font-size: 8vw;
   line-height: 105%;
   margin: 0;
