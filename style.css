@@ -170,7 +170,10 @@ model-viewer {
   max-height: var(--image-max-width);
   margin-top: var(--image-margin);
 }
-
+.imageO{
+  height:300px;
+  float: left;
+}
 /* Instructions */
 .instructions {
   margin: 1rem auto 0;
