@@ -173,6 +173,7 @@ model-viewer {
 .imageO{
   height:300px;
   float: left;
+  margin-right:10px;
 }
 /* Instructions */
 .instructions {
