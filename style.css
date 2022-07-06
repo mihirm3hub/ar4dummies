@@ -151,6 +151,33 @@ body {
   margin-top:20px;
   align-self: flex-end;
   box-shadow: 5px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#qrBtn{
+  position:absolute;
+  align-self: flex-start;
+  margin-bottom:230px;
+  margin-left:10px;
+  background-image: url(https://cdn.glitch.global/5071cd64-d9ab-4d35-9f8c-a1da345381fe/ar_icon.png);
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: 12px 50%;
+  background-color: #fff;
+  padding: 0px 16px 0px 40px;
+  height:50px;
+  border:none;
+  cursor:pointer;
+}
+#qrBtn:hover {
+  box-shadow: 5px 5px;
+  font-weight: bold;
+}
+#qrBtn:active {
+  box-shadow: 0 5px black;
+  transform: translateY(4px);
 }
 /* Very light scaling for our illustration */
 .title {

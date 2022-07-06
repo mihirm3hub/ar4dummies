@@ -16,8 +16,7 @@ const btn = document.querySelector("#qrBtn"); // Get the button from the page
 if (btn) {
   btn.onclick = function() {
     console.log('clicked')
-    // The JS works in conjunction with the 'dipped' code in style.css
-   // btn.classList.toggle("dipped");
+    
   };
 }
 
