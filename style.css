@@ -143,20 +143,22 @@ body {
   padding: 5px;
   margin-left:0;
   align-self: flex-start;
+  box-shadow: 5px 10px;
 }
 .content #bust2{
   border: 3px solid;
   padding: 5px;
-  margin-top:10px;
+  margin-top:20px;
   align-self: flex-end;
+  box-shadow: 5px 10px;
 }
 /* Very light scaling for our illustration */
 .title {
   color: #2800FF;
   font-family: aglet-mono;
   font-style: normal;
-  font-weight: bolder;
-  font-size: 8vw;
+  font-weight: 900;
+  font-size: 7vw;
   line-height: 105%;
   margin: 0;
 }
