@@ -40,11 +40,15 @@
 
     <!-- Import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/nav-style.css" />
     <link rel="stylesheet" href="/model-style.css" />
     <!-- Import the webpage's javascript file -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="/script.js" defer></script>
+   
   </head>
   <body>
+    <div id="navigation"></div>
     <!--
       This is the body of the page
       Look at the elements and see how they appear in the rendered page on the right
@@ -146,5 +150,10 @@
       type="module"
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
     ></script>
+    <script>
+    $(function() {
+    $("#navigation").load("nav.html");
+});
+    </script>
   </body>
 </html>
