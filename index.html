@@ -43,18 +43,26 @@
     <link rel="stylesheet" href="/nav-style.css" />
     <link rel="stylesheet" href="/model-style.css" />
     <!-- Import the webpage's javascript file -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
     <script src="/script.js" defer></script>
-   
   </head>
   <body>
+    <div class="sticky">
+      <h1 class="title">Web AR for Dummies 😮</h1>
+      <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+    </div>
+
     <div id="mySidebar" class="sidebar">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
-</div>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
 
     <!--
       This is the body of the page
@@ -68,7 +76,6 @@
     <div class="wrapper">
       <div class="content" role="main">
         <!-- This is the start of content for our page -->
-        <h1 class="title">Web AR for Dummies 😮</h1><button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>  
 
         <img
           id="bust"
@@ -93,7 +100,6 @@
               <div class="update-bar"></div>
             </div>
             <button slot="ar-button" id="ar-button">View in your space</button>
-            
           </model-viewer>
           <button id="qrBtn"></button>
         </div>
@@ -102,44 +108,42 @@
         <div class="instructions">
           <h2>Getting Started</h2>
           <p>
-            This is the Ar.Js <strong>Hello World</strong>marker based starter project. 
-            You can use it to build your first AR. Check out Result tab in the editor for
-            trying out the AR
+            This is the Ar.Js <strong>Hello World</strong>marker based starter
+            project. You can use it to build your first AR. Check out Result tab
+            in the editor for trying out the AR
           </p>
           <!-- ADD BUTTON HERE -->
           <!-- Copy and Paste Me -->
           <div class="glitch-embed-wrap" style="height: 420px; width: 100%">
-           <iframe
-            style="height: 100%; width: 100%; border: 0"
-            scrolling="no"
-            title="Untitled"
-            src="https://codepen.io/mihir_m3/embed/XWEmXgP?default-tab=html"
-            frameborder="no"
-            loading="lazy"
-            allow="geolocation; microphone; camera; midi; encrypted-media; xr-spatial-tracking; fullscreen"
-            allowtransparency="true"
-            allowfullscreen="true"
-          >
-            See the Pen
-            <a href="https://codepen.io/mihir_m3/pen/XWEmXgP"> Untitled</a> by
-            mihir (<a href="https://codepen.io/mihir_m3">@mihir_m3</a>) on
-            <a href="https://codepen.io">CodePen</a>.
-          </iframe>
+            <iframe
+              style="height: 100%; width: 100%; border: 0"
+              scrolling="no"
+              title="Untitled"
+              src="https://codepen.io/mihir_m3/embed/XWEmXgP?default-tab=html"
+              frameborder="no"
+              loading="lazy"
+              allow="geolocation; microphone; camera; midi; encrypted-media; xr-spatial-tracking; fullscreen"
+              allowtransparency="true"
+              allowfullscreen="true"
+            >
+              See the Pen
+              <a href="https://codepen.io/mihir_m3/pen/XWEmXgP"> Untitled</a> by
+              mihir (<a href="https://codepen.io/mihir_m3">@mihir_m3</a>) on
+              <a href="https://codepen.io">CodePen</a>.
+            </iframe>
           </div>
-          <h3>
-            scan the image below
-          </h3>
-         <p style="padding:10px;"><img
-          id="hiro"
-          src="https://cdn.glitch.global/5071cd64-d9ab-4d35-9f8c-a1da345381fe/hiro.png"
-          class="imageO"
-          alt="Editor illustration"
-          title="Click the image!"
-        />
-      Lorem ipsum dolor sit amet, 
-      consectetur adipiscing elit. 
+          <h3>scan the image below</h3>
+          <p style="padding: 10px">
+            <img
+              id="hiro"
+              src="https://cdn.glitch.global/5071cd64-d9ab-4d35-9f8c-a1da345381fe/hiro.png"
+              class="imageO"
+              alt="Editor illustration"
+              title="Click the image!"
+            />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
-          
+
           <!-- Once you've added the button from the readme, click it in the page -->
           <!-- Check out the function in script.js to see how it works -->
         </div>
@@ -148,7 +152,12 @@
     <!-- The footer holds our remix button — you can use it for structure or cut it out ✂ -->
     <footer class="footer">
       <div class="links"></div>
-      <a id="dev" class="btn--remix" target="_top" href="https://linktr.ee/ambrielm3">
+      <a
+        id="dev"
+        class="btn--remix"
+        target="_top"
+        href="https://linktr.ee/ambrielm3"
+      >
         🕹️&lt;DEV&gt;
       </a>
     </footer>
