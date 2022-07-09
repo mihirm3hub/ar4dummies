@@ -48,7 +48,14 @@
    
   </head>
   <body>
-    <div id="navigation"></div>
+    <div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
     <!--
       This is the body of the page
       Look at the elements and see how they appear in the rendered page on the right
@@ -61,7 +68,7 @@
     <div class="wrapper">
       <div class="content" role="main">
         <!-- This is the start of content for our page -->
-        <h1 class="title">Web AR for Dummies 😮</h1>
+        <h1 class="title">Web AR for Dummies 😮</h1><button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>  
 
         <img
           id="bust"
@@ -141,7 +148,7 @@
     <!-- The footer holds our remix button — you can use it for structure or cut it out ✂ -->
     <footer class="footer">
       <div class="links"></div>
-      <a class="btn--remix" target="_top" href="https://linktr.ee/ambrielm3">
+      <a id="dev" class="btn--remix" target="_top" href="https://linktr.ee/ambrielm3">
         🕹️&lt;DEV&gt;
       </a>
     </footer>
@@ -150,10 +157,5 @@
       type="module"
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
     ></script>
-    <script>
-    $(function() {
-    $("#navigation").load("nav.html");
-});
-    </script>
   </body>
 </html>
