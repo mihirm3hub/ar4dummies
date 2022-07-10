@@ -40,7 +40,6 @@
 
     <!-- Import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css" />
-    <!-- <link rel="stylesheet" href="/nav-style.css" />-->
     <link rel="stylesheet" href="/model-style.css" />
     <!-- Import the webpage's javascript file -->
     <script
@@ -85,8 +84,6 @@
             bounds="tight"
             enable-pan
             src="https://cdn.glitch.global/5071cd64-d9ab-4d35-9f8c-a1da345381fe/scene%20(1).glb"
-            ar
-            ar-modes="webxr scene-viewer quick-look"
             camera-controls
             environment-image="neutral"
             shadow-intensity="1"
@@ -97,9 +94,15 @@
             </div>
             <button slot="ar-button" id="ar-button">View in your space</button>
           </model-viewer>
-          <button id="qrBtn"></button>
         </div>
-
+        <div id="qrBox">
+          <img
+            id="qrCode"
+            src="https://cdn.glitch.global/5071cd64-d9ab-4d35-9f8c-a1da345381fe/Unitag_QRCode_1639837760470.png"
+            class="imageO"
+            alt="qr illustration"
+          />
+        </div>
         <!-- Instructions on using this project -->
         <div class="instructions">
           <h2>Getting Started</h2>
