@@ -19,15 +19,6 @@ if (btn) {
     
   };
 }
-      function openNav() {
-  document.getElementById("mySidebar").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "270px";
-}
-
-function closeNav() {
-  document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-}
 // This is a single line JS comment
 /*
 This is a comment that can span multiple lines 
