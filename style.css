@@ -88,18 +88,47 @@ ul {
   background-color: var(--color-bg);
   border-top: 2px solid #000000;
   border-bottom: 2px solid #000000;
+  
 }
 
 li {
   margin-right:5px;
   float: right;
   border-left: 2px solid #000000;
+  font-weight:600;
+  color:black;
 }
 
 li a {
   display: block;
   padding: 8px;
+  color:black;
+  text-decoration: none;
 }
+li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: hotpink;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+
+
+li a::after {
+  opacity 1;
+  transform: scale(0);
+  transform-origin: center;
+}
+
+li a:hover::after,
+li a:focus::after{
+  transform: scale(1);
+}
+
 li:first-child {
   border-right: 2px solid #000000;
 }
@@ -207,7 +236,7 @@ body {
   font-family: aglet-mono;
   font-style: normal;
   font-weight: 900;
-  font-size: 5vw;
+  font-size: auto;
   line-height: 105%;
   padding: 5px;
 }
