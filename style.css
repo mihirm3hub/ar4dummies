@@ -96,8 +96,11 @@ ul {
   overflow: hidden;
   background-color: var(--color-bg);
   border-top: 2px solid #000000;
-  border-bottom: 2px solid #000000;
-  
+  border-bottom: 2px solid #000000; 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 li {
@@ -138,7 +141,7 @@ li a:focus::after{
   transform: scale(1);
 }
 
-li:first-child {
+li:last-child {
   border-right: 2px solid #000000;
 }
 .footer {
