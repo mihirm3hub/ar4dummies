@@ -198,19 +198,20 @@ body {
   justify-content: center;
   margin-top:15vh;
 }
-.content #bust{
-  border: 3px solid;
-  padding: 5px;
+.content #bust{  
   margin-left:0;
   align-self: flex-start;
-  box-shadow: 5px 10px;
+  max-height: var(--image-max-width);
 }
-.content #bust2{
-  border: 3px solid;
-  padding: 5px;
+.content #sneaks{  
+  margin-left:200px;
+  align-self: flex-start;
+  position:absolute;
+}
+.content #mViewer{
+  max-height: var(--image-max-width);
   margin-top:20px;
   align-self: flex-end;
-  box-shadow: 5px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -269,8 +270,11 @@ model-viewer {
 /* Very light scaling for our illustration */
 .illustration {
   max-width: 100%;
-  max-height: var(--image-max-width);
+
   margin-top: var(--image-margin);
+  border: 3px solid;
+  padding: 5px;
+   box-shadow: 5px 10px;
 }
 .imageO{
   height:300px;
