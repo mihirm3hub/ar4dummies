@@ -206,7 +206,6 @@ section{
   max-height: var(--image-max-width);
 }
 .content #sneaks{  
-  align-self: flex-start;  
 }
 .content #mViewer{
   max-height: var(--image-max-width);
