@@ -198,8 +198,14 @@ body {
   justify-content: center;
   margin-top:15vh;
 }
-
+section{
+  border: 3px solid;
+  width:100%;
+  height:80vh;
+  overflow:hidden;
+}
 .content #bust{  
+  margin-top:380px;
   margin-left:0;
   align-self: flex-start;
   max-height: var(--image-max-width);
@@ -211,7 +217,6 @@ body {
 }
 .content #mViewer{
   top:400px;
-  position:absolute;
   max-height: var(--image-max-width);
   margin-top:20px;
   align-self: flex-end;
@@ -273,8 +278,6 @@ model-viewer {
 /* Very light scaling for our illustration */
 .illustration {
   max-width: 100%;
-
-  margin-top: var(--image-margin);
   border: 3px solid;
   padding: 5px;
    box-shadow: 5px 10px;
