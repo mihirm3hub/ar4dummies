@@ -128,7 +128,7 @@ body {
   display: grid;
   place-items: center;
   margin: 0 1rem;
-  padding-top: 100px;
+  padding-top: 15vh;
 }
 .content {
   display: flex;
@@ -183,9 +183,9 @@ body {
   font-family: aglet-mono;
   font-style: normal;
   font-weight: 900;
-  font-size: 7vw;
+  font-size: 5vw;
   line-height: 105%;
-  margin: 0;
+  padding: 5px;
 }
 
 model-viewer {
@@ -252,7 +252,7 @@ body {
   width: 0;
   position: fixed;
   z-index: 1;
-  top: 0;
+  top:15vh;
   left: 0;
   background-color: #111;
   overflow-x: hidden;
@@ -288,15 +288,11 @@ body {
   color: white;
   padding: 10px 15px;
   border: none;
+  float:right;
 }
 
 .openbtn:hover {
   background-color: #444;
-}
-
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
