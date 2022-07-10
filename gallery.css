@@ -34,6 +34,9 @@
   .image-gallery {
     flex-direction: row;
   }
+    .image-gallery {
+    margin-top: 15vh;
+  }
 }
 @media only screen and (max-width: 900px) {
   #qrBox {
@@ -41,6 +44,7 @@
     opacity: 0;
     transition: visibility 0s 2s, opacity 0.2s linear;
   }
+
 }
 #qrBox {
   display: flex;
