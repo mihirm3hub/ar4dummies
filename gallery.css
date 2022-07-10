@@ -61,6 +61,13 @@
     grid-column:span 2;
   }
 }*/
+.gallery-wrapper {
+  min-height: var(--wrapper-height);
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin: 0 0.5rem;
+}
 
 .image-gallery {
   /* Mobile first */
@@ -90,4 +97,18 @@
   .image-gallery {
     flex-direction: row;
   }
+}
+
+#qrBox{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  position:absolute;
+  top:350px;
+  width:100
+  z-index:1;
+}
+#qrCode{
+  border-radius:25px; 
+  filter: drop-shadow(0 0 0.75rem);
 }

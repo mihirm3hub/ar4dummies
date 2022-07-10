@@ -234,11 +234,7 @@ section{
   box-shadow: 0 5px black;
   transform: translateY(4px);
 }
-#qrBox{
-  position:absolute;
-  top:350px;
-  filter: drop-shadow(0 0 0.75rem);
-}
+
 #qrCode{
   border-radius:25px; 
 }
