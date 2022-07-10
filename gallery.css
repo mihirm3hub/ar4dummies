@@ -75,7 +75,9 @@
   flex-direction: column;
   gap: 10px;
 }
-
+.image-item{
+  margin:6px;
+}
 .image-item img {
   max-width:300px;
   width: 100%;

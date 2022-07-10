@@ -67,84 +67,76 @@
       There are elements for sections of the page, images, text, and more
       The elements include attributes referenced in the CSS for the page style
     -->
-<div class="container">
-  <!-- heading text -->
-  <div class="image-gallery">
-    <div class="column">
-      <div class="image-item">
-        <img
- 
-          src="https://media.giphy.com/media/w4fxPaeRE4s3lwbps4/giphy.gif"
-          class="illustration"
-          alt="Editor illustration"
-          title="Click the image!"
-        />
+    <div class="container">
+      <!-- heading text -->
+      <div class="image-gallery">
+        <div class="column">
+          <div class="image-item">
+            <img
+              src="https://media.giphy.com/media/w4fxPaeRE4s3lwbps4/giphy.gif"
+              class="illustration"
+              alt="Editor illustration"
+              title="Click the image!"
+            />
+          </div>
+          <!-- other items here -->
+          <div class="image-item">
+            <img
+              src="https://media.giphy.com/media/YOlV0TjEfVsm3JSKNW/giphy.gif"
+              class="illustration"
+              alt="Editor illustration"
+              title="Click the image!"
+            />
+          </div>
+        </div>
+        <div class="column">
+          <!-- other items here -->
+          <div class="image-item">
+            <img
+              src="https://media.giphy.com/media/w4fxPaeRE4s3lwbps4/giphy.gif"
+              class="illustration"
+              alt="Editor illustration"
+              title="Click the image!"
+            />
+          </div>
+        </div>
+        <div class="column">
+          <!-- other items here -->
+          <div class="image-item">
+            <img
+              src="https://media.giphy.com/media/YOlV0TjEfVsm3JSKNW/giphy.gif"
+              class="illustration"
+              alt="Editor illustration"
+              title="Click the image!"
+            />
+          </div>
+                    <div class="image-item">
+            <div id="mViewer" class="illustration">
+              <model-viewer
+                bounds="tight"
+                enable-pan
+                src="https://cdn.glitch.global/5071cd64-d9ab-4d35-9f8c-a1da345381fe/scene%20(1).glb"
+                camera-controls
+                environment-image="neutral"
+                shadow-intensity="1"
+                autoplay
+              >
+                <div class="progress-bar hide" slot="progress-bar">
+                  <div class="update-bar"></div>
+                </div>
+                <button slot="ar-button" id="ar-button">
+                  View in your space
+                </button>
+              </model-viewer>
+            </div>
+          </div>
+        </div>
       </div>
-      <!-- other items here -->
-      <img
-          src="https://media.giphy.com/media/YOlV0TjEfVsm3JSKNW/giphy.gif"
-          class="illustration"
-          alt="Editor illustration"
-          title="Click the image!"
-        />
     </div>
-    <div class="column">
-      <!-- other items here -->
-       <img
-          src="https://media.giphy.com/media/w4fxPaeRE4s3lwbps4/giphy.gif"
-          class="illustration"
-          alt="Editor illustration"
-          title="Click the image!"
-        />
-    </div>
-    <div class="column">
-      <!-- other items here -->
-       <img
-          src="https://media.giphy.com/media/YOlV0TjEfVsm3JSKNW/giphy.gif"
-          class="illustration"
-          alt="Editor illustration"
-          title="Click the image!"
-        />
-    </div>
-  </div>
-</div>
     <!-- The wrapper and content divs set margins and positioning -->
     <div id="main" class="wrapper">
       <section class="content" role="main">
         <!-- This is the start of content for our page -->
-
-        
-        
-        <img
-          id="bust"
-          src="https://media.giphy.com/media/YOlV0TjEfVsm3JSKNW/giphy.gif"
-          class="illustration"
-          alt="Editor illustration"
-          title="Click the image!"
-        />
-        <img
-          id="sneaks"
-          src="https://media.giphy.com/media/w4fxPaeRE4s3lwbps4/giphy.gif"
-          class="illustration"
-          alt="Editor illustration"
-          title="Click the image!"
-        />
-        <div id="mViewer" class="illustration">
-          <model-viewer
-            bounds="tight"
-            enable-pan
-            src="https://cdn.glitch.global/5071cd64-d9ab-4d35-9f8c-a1da345381fe/scene%20(1).glb"
-            camera-controls
-            environment-image="neutral"
-            shadow-intensity="1"
-            autoplay
-          >
-            <div class="progress-bar hide" slot="progress-bar">
-              <div class="update-bar"></div>
-            </div>
-            <button slot="ar-button" id="ar-button">View in your space</button>
-          </model-viewer>
-        </div>
         <div id="qrBox">
           <img
             id="qrCode"
