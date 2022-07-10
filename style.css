@@ -25,11 +25,7 @@ to this section's matching END comment to see page-specific styles.
   --font-family: "HK Grotesk";
   --font-family-header: "HK Grotesk";
 }
-@property --rotate {
-  syntax: "<angle>";
-  initial-value: 132deg;
-  inherits: false;
-}
+
 /* Basic page style resets */
 * {
   box-sizing: border-box;
@@ -37,7 +33,16 @@ to this section's matching END comment to see page-specific styles.
 [hidden] {
   display: none !important;
 }
-
+.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .2s linear;
+}
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity .2s linear;
+}
 /* Import fonts */
 @font-face {
   font-family: HK Grotesk;
@@ -237,55 +242,11 @@ body {
 #qrBox{
   position:absolute;
   top:350px;
+  filter: drop-shadow(0 0 0.75rem);
 }
 #qrCode{
-  border-radius:25px;
-  filter: drop-shadow(0 0 0.75rem black);
+  border-radius:25px; 
 }
-#qrCode::before {
-  content: "";
-  width: 104%;
-  height: 102%;
-  border-radius: 8px;
-  background-image: linear-gradient(
-    var(--rotate)
-    , #5ddcff, #3c67e3 43%, #4e00c2);
-    position: absolute;
-    z-index: -1;
-    top: -1%;
-    left: -2%;
-    animation: spin 2.5s linear infinite;
-}
-
-#qrCode::after {
-  position: absolute;
-  content: "";
-  top: calc(var(--card-height) / 6);
-  left: 0;
-  right: 0;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
-  transform: scale(0.8);
-  filter: blur(calc(var(--card-height) / 6));
-  background-image: linear-gradient(
-    var(--rotate)
-    , #5ddcff, #3c67e3 43%, #4e00c2);
-    opacity: 1;
-  transition: opacity .5s;
-  animation: spin 2.5s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    --rotate: 0deg;
-  }
-  100% {
-    --rotate: 360deg;
-  }
-}
-
 /* Very light scaling for our illustration */
 .title {
   color: #2800FF;
