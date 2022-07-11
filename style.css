@@ -321,3 +321,19 @@ h2 {
   align-items: center;
   justify-content: center;
 }
+h2 span{
+  font-size:0.8em;
+  animation: fadeIn infinite 3s;
+  animation-fill-mode: forwards;
+
+  visibility: hidden;
+}
+@keyframes fadeIn {
+  0%,100% {
+    opacity: 0;
+  }
+  50% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
