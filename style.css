@@ -245,9 +245,11 @@ model-viewer {
   font-family: aglet-mono;
   font-style: normal;
   font-weight: 900;
-  font-size: auto;
   line-height: 105%;
   padding: 5px;
+}
+h1{
+  font-size:1.8em;
 }
 
 /* Very light scaling for our illustration */
