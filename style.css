@@ -7,7 +7,6 @@ you're new to CSS they may seem a little complicated, but you can scroll down
 to this section's matching END comment to see page-specific styles.
 ******************************************************************************/
 
-
 /* 
   The style rules specify elements by type and by attributes such as class and ID
   Each section indicates an element or elements, then lists the style properties to apply
@@ -16,7 +15,7 @@ to this section's matching END comment to see page-specific styles.
 
 /* Our default values set as CSS variables */
 :root {
-  --color-bg: #69F7BE;
+  --color-bg: #69f7be;
   --color-text-main: #000000;
   --color-primary: #ffd300;
   --wrapper-height: 87vh;
@@ -34,14 +33,14 @@ to this section's matching END comment to see page-specific styles.
   display: none !important;
 }
 .visible {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity .2s linear;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.2s linear;
 }
 .hidden {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s 2s, opacity .2s linear;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 0.2s linear;
 }
 /* Import fonts */
 @font-face {
@@ -71,7 +70,7 @@ to this section's matching END comment to see page-specific styles.
   height: 2.75rem;
   align-items: center;
   cursor: pointer;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid #000000;
   box-sizing: border-box;
   border-radius: 4px;
@@ -84,19 +83,19 @@ to this section's matching END comment to see page-specific styles.
   margin-right: 0.5rem;
 }
 .btn--remix:hover {
-  background-color: #D0FFF1;
+  background-color: #d0fff1;
 }
 
 /* Navigation grid */
 ul {
-  width:100%;
+  width: 100%;
   list-style-type: none;
   margin: 0;
   padding: 2px;
   overflow: hidden;
   background-color: var(--color-bg);
   border-top: 2px solid #000000;
-  border-bottom: 2px solid #000000; 
+  border-bottom: 2px solid #000000;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -104,21 +103,21 @@ ul {
 }
 
 li {
-  margin-right:5px;
+  margin-right: 5px;
   float: right;
   border-left: 2px solid #000000;
-  font-weight:600;
-  color:black;
+  font-weight: 600;
+  color: black;
 }
 
 li a {
   display: block;
   padding: 8px;
-  color:black;
+  color: black;
   text-decoration: none;
 }
 li a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -129,15 +128,14 @@ li a::after {
   transition: opacity 300ms, transform 300ms;
 }
 
-
 li a::after {
-  opacity 1;
+  opacity: 1;
   transform: scale(0);
   transform-origin: center;
 }
 
 li a:hover::after,
-li a:focus::after{
+li a:focus::after {
   transform: scale(1);
 }
 
@@ -153,10 +151,10 @@ li:last-child {
   flex-wrap: wrap;
   border-top: 4px solid #fff;
 }
-.footer a{
+.footer a {
   border: 3px solid;
   padding: 10px;
-  margin-right:20px;
+  margin-right: 20px;
   font-family: aglet-mono;
   font-style: normal;
   font-weight: normal;
@@ -165,7 +163,7 @@ li:last-child {
   text-decoration: none;
 }
 .footer a:hover {
-  background: var(--color-primary);  
+  background: var(--color-primary);
   box-shadow: 3px 5px;
   font-weight: bold;
 }
@@ -195,17 +193,17 @@ body {
   margin: 0 1rem;
 }
 
-section{
-  width:100%;
-  height:83vh;
-  overflow:hidden;
+section {
+  width: 100%;
+  height: 83vh;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.content #mViewer{
+.content #mViewer {
   max-height: var(--image-max-width);
   align-self: flex-end;
   display: flex;
@@ -214,20 +212,20 @@ section{
   justify-content: center;
   border-radius: 5px;
 }
-#qrBtn{
-  position:absolute;
+#qrBtn {
+  position: absolute;
   align-self: flex-start;
-  margin-bottom:230px;
-  margin-left:10px;
+  margin-bottom: 230px;
+  margin-left: 10px;
   background-image: url(https://cdn.glitch.global/5071cd64-d9ab-4d35-9f8c-a1da345381fe/ar_icon.png);
   background-repeat: no-repeat;
   background-size: 30px 30px;
   background-position: 12px 50%;
   background-color: #fff;
   padding: 0px 16px 0px 40px;
-  height:50px;
-  border:none;
-  cursor:pointer;
+  height: 50px;
+  border: none;
+  cursor: pointer;
 }
 #qrBtn:hover {
   box-shadow: 5px 5px;
@@ -238,12 +236,12 @@ section{
   transform: translateY(4px);
 }
 
-#qrCode{
-  border-radius:25px; 
+#qrCode {
+  border-radius: 25px;
 }
 /* Very light scaling for our illustration */
 .title {
-  color: #2800FF;
+  color: #2800ff;
   font-family: aglet-mono;
   font-style: normal;
   font-weight: 900;
@@ -254,9 +252,9 @@ section{
 
 model-viewer {
   width: 300px;
-  min-width:300px;
+  min-width: 300px;
   height: 300px;
-  background-color: #b79eb1;  
+  background-color: #b79eb1;
   padding: 10px;
 }
 
@@ -266,16 +264,16 @@ model-viewer {
   border: 3px solid;
   padding: 5px;
   box-shadow: 5px 10px;
-  border-radius:5px;
+  border-radius: 5px;
 }
-.imageO{
-  height:300px;
+.imageO {
+  height: 300px;
   float: left;
-  margin-right:10px;
+  margin-right: 10px;
 }
 /* Instructions */
 .instructions {
-  margin: 1rem auto 0;
+  margin: 2rem auto 0;
 }
 
 /* Button - Add it from the README instructions */
@@ -283,7 +281,7 @@ button,
 input {
   font-family: inherit;
   font-size: 100%;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid #000000;
   box-sizing: border-box;
   border-radius: 4px;
@@ -293,9 +291,25 @@ input {
 
 /* Subheading */
 h2 {
-  color: #2800FF;
+  color: #2800ff;
+}
+h2 span {
+  font-size: 0.8em;
+  animation: fadeIn infinite 3s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
 }
 
+@keyframes fadeIn {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
 /* Interactive image */
 .illustration:active {
   transform: translateY(5px);
@@ -312,28 +326,12 @@ h2 {
 .sticky {
   position: fixed;
   top: 0;
-  left:0;
+  left: 0;
   width: 100%;
   background-color: var(--color-bg);
-  z-index:10;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-h2 span{
-  font-size:0.8em;
-  animation: fadeIn infinite 3s;
-  animation-fill-mode: forwards;
-
-  visibility: hidden;
-}
-@keyframes fadeIn {
-  0%,100% {
-    opacity: 0;
-  }
-  50% {
-    visibility: visible;
-    opacity: 1;
-  }
 }
