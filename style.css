@@ -130,19 +130,18 @@ li a {
   height: 2px;
   bottom: 0;
   left: 2.5px;
-  background-color: 
-#0087ca;
+  background-color: black;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
 
 .underAnim:hover:after {
-  transform: scaleX(1);
+  transform: scaleX(0.9);
   transform-origin: center;
 }
 
 li:last-child {
-  left:3px;
+  padding-right:4px;
   border-right: 2px solid #000000;
 }
 .footer {
