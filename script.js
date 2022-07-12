@@ -14,10 +14,18 @@ Make the "Click me!" button move when the visitor clicks it:
 const btn = document.querySelector("#qrBtn"); // Get the button from the page
 // Detect clicks on the button
 if (btn) {
-  btn.onclick = function() {
-    console.log('clicked')
-    
+  btn.onclick = function () {
+    console.log("clicked");
   };
+}
+
+const emoji = document.querySelector("#emoji");
+if (emoji) {
+  const getRandomEmoji = () => {
+    const emojis = ['😀','😃','😄','😁','😆','😅','🤣','😂','🙂','🙃','😉','😊','😇','🥰','😍','🤩','😘','😗','😚','😙','😋','😛','😜','🤪','😝','🤑','🤗','🤭','🤫','🤔','🤐','🤨','😐','😑','😶','😏','😒','🙄','😬','🤥','😌','😔','😪','🤤','😴','😷','🤒','🤕','🤢','🤮','🤧','🥵','🥶','🥴','😵','🤯','🤠','🥳','😎','🤓','🧐','😕','😟','🙁','😮','😯','😲','😳','🥺','😦','😧','😨','😰','😥','😢','😭','😱','😖','😣','😞','😓','😩','😫','🥱','😤','😡','😠','🤬','😈','👿','💀']
+    emoji.innerHTML = emojis[~~(Math.random() * emojis.length)];
+  };
+  setInterval(getRandomEmoji, 1000);
 }
 // This is a single line JS comment
 /*
