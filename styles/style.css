@@ -196,14 +196,14 @@ body {
 }
 
 model-viewer {
-  width: 300px;
-  min-width: 300px;
+  width: 100%;
   height: 300px;
   background-color: #b79eb1;
   padding: 10px;
 }
 
-.content #mViewer {
+#mViewer {
+  max-width:300px;
   max-height: var(--image-max-width);
   align-self: flex-end;
   display: flex;
