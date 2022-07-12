@@ -59,6 +59,16 @@
   color: black;
   text-decoration: none;
 }
+  #comingS{
+    margin-top:40%;
+  }
+  #comingS img{
+  width:40vh;
+  height:40vh;
+}
+#comingS h2{
+  font-size:2em;
+}
 }
 #qrBox {
   display: flex;

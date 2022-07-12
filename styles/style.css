@@ -309,3 +309,20 @@ h2 {
   align-items: center;
   justify-content: center;
 }
+
+#comingS{
+  margin-top:9%;
+  width:100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#comingS img{
+  width:60vh;
+  height:60vh;
+}
+#comingS h2{
+  font-size:3em;
+}
