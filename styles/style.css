@@ -256,7 +256,6 @@ model-viewer {
   box-shadow: 5px 10px;
   border-radius: 5px;
 }
-
 /* Interactive image */
 .illustration:active {
   transform: translateY(5px);
@@ -272,7 +271,9 @@ model-viewer {
 .instructions {
   margin: 1rem auto 0;
 }
-
+.instructions a{
+  color: magenta;
+}
 /* Subheading */
 h2 {
   color: #2800ff;
