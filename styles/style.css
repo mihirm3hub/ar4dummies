@@ -256,7 +256,9 @@ model-viewer {
   box-shadow: 5px 10px;
   border-radius: 5px;
 }
-
+#preR{
+  margin:1rem 2rem 0;
+}
 /* Interactive image */
 .illustration:active {
   transform: translateY(5px);
