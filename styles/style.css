@@ -253,7 +253,7 @@ model-viewer {
   max-width: 100%;
   border: 3px solid;
   padding: 5px;
-  box-shadow: 5px 10px;
+  box-shadow: 5px 5px;
   border-radius: 5px;
 }
 /* Interactive image */
@@ -320,8 +320,8 @@ h2 {
   justify-content: center;
 }
 #comingS img{
-  width:60vh;
-  height:60vh;
+  width:55vh;
+  height:55vh;
 }
 #comingS h2{
   font-size:3em;
