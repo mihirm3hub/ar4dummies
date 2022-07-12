@@ -279,7 +279,7 @@ h2 {
   color: #2800ff;
 }
 
-h2 span {
+.blink {
   font-size: 0.8em;
   animation: fadeIn infinite 3s;
   animation-fill-mode: forwards;
