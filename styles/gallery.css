@@ -49,7 +49,7 @@
     width: 400px;
     position: absolute;
     margin-top: 5%;
-    filter: drop-shadow(0 0 1rem);
+
     scale: 1;
   }
   #abs2 {
@@ -60,7 +60,7 @@
     position: absolute;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
-    filter: drop-shadow(0 0 1rem);
+    filter: drop-shadow(0 0 0.3rem);
   }
 }
 @media only screen and (max-width: 900px) {
@@ -94,7 +94,7 @@
     width: 250px;
     position: absolute;
     margin-top: 15%;
-    filter: drop-shadow(0 0 1rem);
+    filter: drop-shadow(0 0 0.3rem);
   }
 
   #abs2 {
@@ -106,7 +106,7 @@
     margin-top: 15%;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
-    filter: drop-shadow(0 0 1rem);
+    filter: drop-shadow(0 0 0.3rem);
   }
 }
 #qrBox {
