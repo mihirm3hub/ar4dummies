@@ -43,21 +43,21 @@
   #amz-sneaks {
     margin-top: 7.8vw;
   }
- #abs {
+  #abs {
     z-index: -1;
-    left:  100px;
+    left: 100px;
     width: 750px;
     position: absolute;
     -webkit-transform: rotate(20deg);
-    transform: rotate(20deg);  
+    transform: rotate(20deg);
   }
- #absx {
+  #absx {
     z-index: -1;
-    left:  100px;
+    left: 100px;
     width: 550px;
     position: absolute;
     -webkit-transform: rotate(20deg);
-    transform: rotate(20deg);  
+    transform: rotate(20deg);
   }
   #abs2 {
     z-index: -1;
@@ -66,7 +66,7 @@
     width: 400px;
     position: absolute;
     -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);    
+    transform: scaleX(-1);
   }
 }
 @media only screen and (max-width: 900px) {
@@ -95,34 +95,37 @@
     font-size: 2em;
   }
   path {
-  fill: none;
-  stroke-width: 8px;
-  stroke-linejoin: round;
-}
-  #abs {
+    fill: none;
+    stroke-width: 8px;
+    stroke-linejoin: round;
+  }
+  #blob-top {
     z-index: -1;
     left: -200px;
     width: 450px;
     position: absolute;
   }
- #absx {
+  #blob-top1 {
     z-index: -1;
     left: -200px;
     width: 350px;
     position: absolute;
     -webkit-transform: rotate(20deg);
-    transform: rotate(20deg);  
+    transform: rotate(20deg);
   }
-  #abs2 {
+  #blob-bot {
     z-index: -1;
-    bottom: -1400px;
     right: -100px;
-    width: 250px;
+    bottom: -1400px;
+    width: 450px;
     position: absolute;
-    margin-top: 15%;
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-    filter: drop-shadow(0 0 0.3rem);
+  }
+  #blob-bot1 {
+    z-index: -1;
+    right: -90px;
+    bottom: -1350px;
+    width: 350px;
+    position: absolute;
   }
 }
 #qrBox {
