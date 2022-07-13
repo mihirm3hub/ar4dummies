@@ -284,6 +284,7 @@ h2 {
   animation: fadeIn infinite 3s;
   animation-fill-mode: forwards;
   visibility: hidden;
+  color:orange;
 }
 
 @keyframes fadeIn {

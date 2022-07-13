@@ -34,14 +34,14 @@
   .image-gallery {
     flex-direction: row;
   }
-    .image-gallery {
+  .image-gallery {
     margin-top: 15vh;
   }
-  h1{
-  font-size:2.2em;
+  h1 {
+    font-size: 2.2em;
   }
-  #amz-sneaks{
-  margin-top:7.8vw;
+  #amz-sneaks {
+    margin-top: 7.8vw;
   }
 }
 @media only screen and (max-width: 900px) {
@@ -50,25 +50,42 @@
     opacity: 0;
     transition: visibility 0s 2s, opacity 0.2s linear;
   }
-  h1{
-  font-size:1.6em;
+  h1 {
+    font-size: 1.6em;
   }
   li a {
-  display: block;
-  padding: 4px;
-  color: black;
-  text-decoration: none;
-}
-  #comingS{
-    margin-top:50%;
+    display: block;
+    padding: 4px;
+    color: black;
+    text-decoration: none;
   }
-  #comingS img{
-  width:45vh;
-  height:45vh;
-}
-#comingS h2{
-  font-size:2em;
-}
+  #comingS {
+    margin-top: 50%;
+  }
+  #comingS img {
+    width: 45vh;
+    height: 45vh;
+  }
+  #comingS h2 {
+    font-size: 2em;
+  }
+  #abs{
+  z-index:-1;
+  left:-100px;
+  width:250px;
+  position:absolute;
+  margin-top:15%;
+  }
+  #abs2{
+  z-index:-1;
+  bottom:-1400px;
+  right:-100px;
+  width:250px;
+  position:absolute;
+  margin-top:15%;
+    -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  }
 }
 #qrBox {
   display: flex;
@@ -82,7 +99,6 @@
 #qrCode {
   border-radius: 25px;
   filter: drop-shadow(0 0 0.75rem);
-  width:250px;
-  height:250px;
+  width: 250px;
+  height: 250px;
 }
-
