@@ -53,9 +53,10 @@
   position:absolute;
   margin-top:5%;
   filter: drop-shadow(0 0 1rem);
+  scale:1;
   }
   #abs:hover{
-     transform: scale(3);
+    transform: scale(3);
   }
   #abs2{
   z-index:-1;
