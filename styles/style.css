@@ -327,3 +327,8 @@ h2 {
 #comingS h2 {
   font-size: 3em;
 }
+path {
+  fill: none;
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
