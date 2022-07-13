@@ -1,0 +1,126 @@
+.gallery-wrapper {
+  min-height: var(--wrapper-height);
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin: 0 0.5rem;
+}
+
+.image-gallery {
+  /* Mobile first */
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.image-gallery .column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.image-item {
+  margin: 6px;
+}
+.image-item img {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 5px;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 768px) {
+  .image-gallery {
+    flex-direction: row;
+  }
+  .image-gallery {
+    margin-top: 15vh;
+  }
+  h1 {
+    font-size: 2.2em;
+  }
+  #amz-sneaks {
+    margin-top: 7.8vw;
+  }
+  #abs {
+    z-index: -1;
+    left: 100px;
+    width: 400px;
+    position: absolute;
+    margin-top: 5%;
+    filter: drop-shadow(0 0 1rem);
+    scale: 1;
+  }
+  #abs2 {
+    z-index: -1;
+    bottom: 0px;
+    right: 100px;
+    width: 400px;
+    position: absolute;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: drop-shadow(0 0 1rem);
+  }
+}
+@media only screen and (max-width: 900px) {
+  #qrBox {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity 0.2s linear;
+  }
+  h1 {
+    font-size: 1.6em;
+  }
+  li a {
+    display: block;
+    padding: 4px;
+    color: black;
+    text-decoration: none;
+  }
+  #comingS {
+    margin-top: 50%;
+  }
+  #comingS img {
+    width: 45vh;
+    height: 45vh;
+  }
+  #comingS h2 {
+    font-size: 2em;
+  }
+  #abs {
+    z-index: -1;
+    left: -100px;
+    width: 250px;
+    position: absolute;
+    margin-top: 15%;
+    filter: drop-shadow(0 0 1rem);
+  }
+
+  #abs2 {
+    z-index: -1;
+    bottom: -1400px;
+    right: -100px;
+    width: 250px;
+    position: absolute;
+    margin-top: 15%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: drop-shadow(0 0 1rem);
+  }
+}
+#qrBox {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  position: absolute;
+  top: 420px;
+  width: 100%;
+  z-index: 1;
+}
+#qrCode {
+  border-radius: 25px;
+  filter: drop-shadow(0 0 0.75rem);
+  width: 250px;
+  height: 250px;
+}
