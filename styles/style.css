@@ -328,6 +328,7 @@ h2 {
   font-size: 3em;
 }
 path {
+  z-index:10000;
   fill: none;
   stroke-width: 4px;
   stroke-linejoin: round;

@@ -43,30 +43,34 @@
   #amz-sneaks {
     margin-top: 7.8vw;
   }
-  #abs {
+
+    #blob-top {
     z-index: -1;
-    left: 100px;
+    left: -200px;
     width: 750px;
     position: absolute;
-    -webkit-transform: rotate(20deg);
-    transform: rotate(20deg);
   }
-  #absx {
+  #blob-top1 {
     z-index: -1;
-    left: 100px;
+    left: -200px;
     width: 550px;
     position: absolute;
     -webkit-transform: rotate(20deg);
     transform: rotate(20deg);
   }
-  #abs2 {
+  #blob-bot {
     z-index: -1;
-    bottom: 0px;
-    right: 100px;
-    width: 400px;
+    right: -100px;
+    bottom: -150px;
+    width: 850px;
     position: absolute;
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
+  }
+  #blob-bot1 {
+    z-index: -1;
+    right: -75px;
+    bottom: -50px;
+    width: 650px;
+    position: absolute;
   }
 }
 @media only screen and (max-width: 900px) {
