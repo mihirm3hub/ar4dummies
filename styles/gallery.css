@@ -88,6 +88,9 @@
     color: black;
     text-decoration: none;
   }
+  .image-item img {
+  max-width: 200px;
+}
   #comingS {
     margin-top: 50%;
   }
@@ -105,13 +108,11 @@
   }
   #blob-top {
     z-index: -1;
-
     width: 450px;
     position: absolute;
   }
   #blob-top1 {
     z-index: -1;
-
     width: 350px;
     position: absolute;
     -webkit-transform: rotate(20deg);
@@ -119,16 +120,16 @@
   }
   #blob-bot {
     z-index: -1;
-
-    bottom: -1400px;
-    width: 150px;
+    left:150px;
+    bottom: -670px;
+    width: 230px;
     position: absolute;
   }
   #blob-bot1 {
     z-index: -1;
-    transform: scale(5, 5);
-    bottom: -1350px;
-    width: 150px;
+    left:150px;
+    bottom: -700px;
+    width: 200px;
     position: absolute;
   }
 }
