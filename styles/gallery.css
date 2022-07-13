@@ -51,9 +51,14 @@
     -webkit-transform: rotate(20deg);
     transform: rotate(20deg);  
   }
-  #blob1{
-  width:450px;
-}
+ #absx {
+    z-index: -1;
+    left:  100px;
+    width: 550px;
+    position: absolute;
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);  
+  }
   #abs2 {
     z-index: -1;
     bottom: 0px;
@@ -89,13 +94,25 @@
   #comingS h2 {
     font-size: 2em;
   }
+  path {
+  fill: none;
+  stroke-width: 8px;
+  stroke-linejoin: round;
+}
   #abs {
     z-index: -1;
     left: -200px;
     width: 450px;
     position: absolute;
   }
-
+ #absx {
+    z-index: -1;
+    left: -200px;
+    width: 350px;
+    position: absolute;
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);  
+  }
   #abs2 {
     z-index: -1;
     bottom: -1400px;
