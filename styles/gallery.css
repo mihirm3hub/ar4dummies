@@ -78,6 +78,10 @@
     opacity: 0;
     transition: visibility 0s 2s, opacity 0.2s linear;
   }
+  #spline{
+    margin-left:-100px;
+    height:700px;
+  }
   h1 {
     font-size: 1.6em;
   }
