@@ -71,6 +71,11 @@
     width: 650px;
     position: absolute;
   }
+    #spline{
+    margin-top:350px;
+    margin-left:-500px;
+    height:800px;
+  }
 }
 @media only screen and (max-width: 900px) {
   #qrBox {
@@ -79,8 +84,9 @@
     transition: visibility 0s 2s, opacity 0.2s linear;
   }
   #spline{
-    margin-left:-100px;
-    height:700px;
+    margin-top:150px;
+    margin-left:-150px;
+    height:600px;
   }
   h1 {
     font-size: 1.6em;
