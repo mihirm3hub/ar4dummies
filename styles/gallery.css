@@ -77,6 +77,12 @@
     width:100%;
     height:400px;
   }
+    .d-flex{
+    width:70%;
+  }
+  #code-94{
+    width:70%;
+  }
 }
 @media only screen and (max-width: 900px) {
   #qrBox {
@@ -121,6 +127,12 @@
   }
   svg{
     display:none;
+  }
+      .d-flex{
+    width:100%;
+  }
+  #code-94{
+    width:100%;
   }
 }
 #qrBox {

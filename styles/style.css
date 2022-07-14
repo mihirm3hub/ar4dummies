@@ -362,7 +362,7 @@ path {
 .copy-btn{
   align-self: flex-end;
   float:right;
-  margin-right:5px;
+  margin-right:20px;
 }
 #code-94{
   font-family: aglet-mono;
@@ -372,6 +372,9 @@ path {
   padding: 5px;
   align-self: center;
   border-radius: 0 0 15px 15px;
+}
+#code-94 span{
+  margin-left:20px;
 }
  .hljs-name {
     color: #569CD6;
