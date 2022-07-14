@@ -333,3 +333,9 @@ path {
   stroke-width: 4px;
   stroke-linejoin: round;
 }
+#spline{
+  position:absolute;
+  height:1500px;
+  z-index:-1;
+  margin-top:-400px;
+}
