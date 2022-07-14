@@ -62,8 +62,13 @@
         <li><a href="#Ar.js" class="underAnim">Ar.js</a></li>
       </ul>
     </div>
-    <iframe id="spline" src="https://my.spline.design/untitled-0f46b064e716b0a8405dec8c299354d3/" frameborder="0"></iframe>
-    <script src="https://my.spline.design/untitled-0f46b064e716b0a8405dec8c299354d3/"></script>
+   <canvas id="canvas3d"></canvas>
+     <script type="module">
+      import { Application } from './runtime.js';
+      const canvas = document.getElementById('canvas3d');
+      const app = new Application(canvas); 
+      app.load('https://prod.spline.design/8L9Y8uSy8KybdQKt/scene.splinecode');
+    </script>
     <!--
       This is the body of the page
       Look at the elements and see how they appear in the rendered page on the right

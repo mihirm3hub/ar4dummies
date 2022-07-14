@@ -333,10 +333,11 @@ path {
   stroke-width: 4px;
   stroke-linejoin: round;
 }
-#spline{
+#canvas3d{
   position:absolute;
-  height:1000px;
   z-index:-1;
+  transform: scale(3);
+  margin-left:-100px;
   margin-top:-100px;
   filter: drop-shadow(0 0 0.75rem);
 }
