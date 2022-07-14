@@ -72,7 +72,15 @@
     </script>
     </div>
    
-
+      <div id="spline-bot">
+      <canvas id="canvas3d-bot"></canvas>
+      <script type="module">
+      import { Application } from './runtime.js';
+      const canvas = document.getElementById('canvas3d-bot');
+      const app = new Application(canvas); 
+    app.load('https://prod.spline.design/fBVoJICZ1gxFX1fu/scene.splinecode');
+    </script>
+    </div>
     <!--
       This is the body of the page
       Look at the elements and see how they appear in the rendered page on the right
