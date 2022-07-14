@@ -347,3 +347,16 @@ path {
   z-index:-1;
   filter: drop-shadow(0 0 0.75rem);
 }
+
+.d-flex{
+  background-color:black;
+  color:gray;
+  flex-direction: row;
+  width:100%;
+  padding: 5px;
+}
+.copy-btn{
+  align-self: flex-start;
+  float:right;
+  margin-right:5px;
+}
