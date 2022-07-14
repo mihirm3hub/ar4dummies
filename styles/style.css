@@ -335,7 +335,8 @@ path {
 }
 #spline{
   position:absolute;
-  height:1500px;
+  height:1000px;
   z-index:-1;
-  margin-top:-400px;
+  margin-top:-100px;
+  filter: drop-shadow(0 0 0.75rem);
 }
