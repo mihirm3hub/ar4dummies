@@ -349,14 +349,30 @@ path {
 }
 
 .d-flex{
-  background-color:black;
-  color:gray;
+  background-color:#1E1E1E;
+  color:#DCDCDC;
   flex-direction: row;
   width:100%;
   padding: 5px;
+  border-radius: 15px 15px 0 0;
+}
+.d-flex strong{
+  margin-left:20px;
 }
 .copy-btn{
-  align-self: flex-start;
+  align-self: flex-end;
   float:right;
   margin-right:5px;
+}
+#code-94{
+  font-family: aglet-mono;
+  background-color:#1E1E1E;
+  color:#DCDCDC;
+  width:100%;
+  padding: 5px;
+  align-self: center;
+  border-radius: 0 0 15px 15px;
+}
+ .hljs-name {
+    color: #569CD6;
 }
