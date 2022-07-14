@@ -87,7 +87,13 @@
   #spline{
     margin-top:150px;
     margin-left:-150px;
-    height:600px;
+    height:300px;
+  }
+    #spline-bot{
+    margin-top:950px;
+    margin-left:150px;
+    transform:scale(0.5);
+    height:400px;
   }
   h1 {
     font-size: 1.6em;
