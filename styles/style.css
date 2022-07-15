@@ -363,6 +363,11 @@ path {
   align-self: flex-end;
   float:right;
   margin-right:20px;
+  color:#DCDCDC;
+  font-family: aglet-mono;
+  border:none;
+  cursor:pointer;
+  background-color:transparent;
 }
 #code-94{
   font-family: aglet-mono;
@@ -378,4 +383,8 @@ path {
 }
  .hljs-name {
     color: #569CD6;
+}
+#copy:{
+  padding:5px;
+  margin-left:-51px;
 }
