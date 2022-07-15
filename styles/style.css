@@ -388,3 +388,8 @@ path {
   padding:5px;
   margin-left:-51px;
 }
+#content{
+  background-color:#1E1E1E;
+  color:#DCDCDC;
+  border:none;
+}
