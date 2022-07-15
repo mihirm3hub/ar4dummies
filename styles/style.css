@@ -354,6 +354,7 @@ path {
   flex-direction: row;
   width:100%;
   padding: 5px;
+  padding-top:10px;
   border-radius: 15px 15px 0 0;
 }
 .d-flex strong{
@@ -378,9 +379,6 @@ path {
   align-self: center;
   border-radius: 0 0 15px 15px;
 }
-#code-94 span{
-  margin-left:20px;
-}
  .hljs-name {
     color: #569CD6;
 }
@@ -392,4 +390,9 @@ path {
   background-color:#1E1E1E;
   color:#DCDCDC;
   border:none;
+  resize: none;
+  width:250px;
+  font-family: aglet-mono;
+  font-size:1em;
+   margin-left:20px;
 }

@@ -140,5 +140,10 @@ This is a comment that can span multiple lines
 function addToClipboard() {
   /* Get the text field */
   var copyText = document.getElementById("content").value;
-  navigator.clipboard.writeText(copyText);
+  navigator.clipboard.writeText(copyText).then(() => {
+        document.getElementById("copy-text").innerHTML = 'Copied'
+            setTimeout(() => {
+              document.getElementById("copy-text").innerHTML = 'Copy'
+            },500)
+    });
 }
