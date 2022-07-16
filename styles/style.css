@@ -352,7 +352,6 @@ path {
   background-color:#1E1E1E;
   color:#DCDCDC;
   flex-direction: row;
-  width:100%;
   height:auto;
   padding: 5px;
   padding-top:10px;
@@ -373,16 +372,22 @@ path {
   background-color:transparent;
 }
 .d-flex pre{
-   display: flex;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  margin:0;
+  width:100%;
+  margin:0;
+  padding:0;
 }
 .code{
-  font-family: aglet-mono;
-  color:#DCDCDC;
-  width:70%;
+  align-self:flex-start;
   margin-left:-100px;
+  padding:0;
+  float:left;
+  font-family: aglet-mono;
+  width:100%;
 }
  .hljs-name {
     color: #569CD6;
@@ -391,15 +396,9 @@ path {
 .content{
   background-color:#1E1E1E;
   color:#DCDCDC;
-  border:none;
-  resize: none;
-  width:80%;
-   height:auto;
-  width: -moz-fit-content;
+  width:99%;
+  height:auto;
   font-family: aglet-mono;
-  font-size:1em;
-  margin-left:20px;
-  overflow:hidden;
 }
 
 .slide {
