@@ -380,8 +380,9 @@ path {
 }
 .code{
   font-family: aglet-mono;
-  background-color:#1E1E1E;
   color:#DCDCDC;
+  width:70%;
+  margin-left:-100px;
 }
  .hljs-name {
     color: #569CD6;
@@ -399,4 +400,11 @@ path {
   font-size:1em;
   margin-left:20px;
   overflow:hidden;
+}
+
+.slide {
+  display: inline-block;
+  width: 100%;
+  word-wrap: break-word;
+  white-space: initial;
 }
