@@ -355,7 +355,7 @@ path {
   width:100%;
   padding: 5px;
   padding-top:10px;
-  border-radius: 15px 15px 0 0;
+  border-radius: 15px;
 }
 .d-flex strong{
   margin-left:20px;
@@ -370,29 +370,27 @@ path {
   cursor:pointer;
   background-color:transparent;
 }
-#cdn-code{
+.code{
   font-family: aglet-mono;
   background-color:#1E1E1E;
   color:#DCDCDC;
   width:100%;
   padding: 5px;
   align-self: center;
-  border-radius: 0 0 15px 15px;
+   height:auto;
 }
  .hljs-name {
     color: #569CD6;
 }
-#copy:{
-  padding:5px;
-  margin-left:-51px;
-}
+
 .content{
   background-color:#1E1E1E;
   color:#DCDCDC;
   border:none;
   resize: none;
-  width:250px;
+  width:80%;
+  width: -moz-fit-content;
   font-family: aglet-mono;
   font-size:1em;
-   margin-left:20px;
+  margin-left:20px;
 }

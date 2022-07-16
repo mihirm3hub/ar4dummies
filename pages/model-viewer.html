@@ -90,34 +90,39 @@
           <ol>
           1. <a href="https://ar-m3-store-assets.s3.ap-south-1.amazonaws.com/test-scene.glb">3D model</a><br/>
          <br/>
-                <div class="d-flex">
+            <div class="d-flex">
+                              <div>
                     <strong>CDN</strong>
                     <button
                       id="cdn-copy-btn"
                       onclick="addToClipboard(document.getElementById('cdn'));"
                       class="btn copy-btn"
                     >
-                      <i class="far fa-copy"> </i>&nbsp;<span id="copy-text">Copy</span>
+                      <i class="far fa-copy"> </i>&nbsp;<span id="">Copy</span>
                     </button>
                 </div>
-                  <div id="cdn-code">
+                  <div id="cdn-code" class="code">
                        <textarea id="cdn" class="content">https://cutt.ly/MLTACDt</textarea>
                   </div><br/>
+            </div>
+
           2. <a href="https://aframe.io/">A-Frame</a><br/>
             <br/>
-                <div class="d-flex">
-                    <strong>CDN</strong>
+            <div class="d-flex">
+                <div>
+                    <strong>Script</strong>
                     <button
                       id="script-copy-btn"
                       onclick="addToClipboard(document.getElementById('cdn'));"
                       class="btn copy-btn"
                     >
-                      <i class="far fa-copy"> </i>&nbsp;<span id="copy-text">Copy</span>
+                      <i class="far fa-copy"> </i>&nbsp;<span>Copy</span>
                     </button>
                 </div>
-                  <div id="script-code">
-                       <textarea id="cdn" class="content">https://cutt.ly/MLTACDt</textarea>
+                  <div id="script-code" class="code">
+                       <textarea id="script-src" class="content"><script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script></textarea>
                   </div><br/>
+            </div>
           3. <a href="https://playcanvas.com/">PlayCanvas</a><br/>
           4. <a href="https://www.babylonjs.com/">Babylon.js</a><br/>
           5. <a href="https://modelviewer.dev/">&lt;model-viewer&gt;</a><br/>   
