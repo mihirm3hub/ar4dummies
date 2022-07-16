@@ -137,15 +137,6 @@ This is a comment that can span multiple lines
         document.head.appendChild(script);
     })();*/
 
-$(document).ready(function(){
-
-  textAreaAdjust(document.getElementById('script-src') );
-});
-
-function textAreaAdjust(o) {
-  o.style.height = "1px";
-  o.style.height = (o.scrollHeight)+"px";
-}
 
 function copyCode(button) {
  // const button = this;
