@@ -89,45 +89,46 @@
          <strong>Requirements:</strong> 
           <ol>
           1. <a href="https://ar-m3-store-assets.s3.ap-south-1.amazonaws.com/test-scene.glb">3D model</a><br/>
-         <br/>
+         <br/>     
             <div class="d-flex">
-                              <div>
-                    <strong>CDN</strong>
-                    <button
-                      id="cdn-copy-btn"
-                      onclick="addToClipboard(document.getElementById('cdn'));"
-                      class="btn copy-btn"
-                    >
-                      <i class="far fa-copy"> </i>&nbsp;<span id="copy-text">Copy</span>
-                    </button>
-                </div>
-                  <div id="cdn-code" class="code">
-                       <textarea id="cdn" class="content">https://cutt.ly/MLTACDt</textarea>
-                  </div><br/>
-            </div>
-
-          2. <a href="https://aframe.io/">A-Frame</a><br/>
-            <br/>
-            <div class="d-flex">
-                <div>
-                    <strong>Script</strong>
                     <button
                       id="script-copy-btn"
-                      onclick="addToClipboard(document.getElementById('script-code'));"
+                      onclick="copyCode(this);"
                       class="btn copy-btn"
                     >
                       <i class="far fa-copy"> </i>&nbsp;<span id="copy-text">Copy</span>
-                    </button>
-                </div>
-              
-                  <div id="script-code" class="code">
-                    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span>
-                       <textarea id="script-src" class="content">
-                        type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
-                      </textarea>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">/script</span>&gt;</span>
-                  </div><br/>
-            </div>
+                    </button>          
+                    <strong>CDN</strong>
+
+           
+          <div id="code-92">
+            <pre><code class="hljs html">https://cutt.ly/MLTACDt</code></pre>
+          </div>
+        </div>
+  <br/>   
+          2. <a href="https://aframe.io/">A-Frame</a><br/>
+                     <br/>     
+            <div class="d-flex">
+                    <button
+                      id="script-copy-btn"
+                      onclick="copyCode(this);"
+                      class="btn copy-btn"
+                    >
+                      <i class="far fa-copy"> </i>&nbsp;<span id="copy-text">Copy</span>
+                    </button>          
+                    <strong>Script</strong>
+
+           
+          <div id="code-92">
+             <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span>
+                      a = 6;
+                      b = 9;
+                      c = "this is the best program";
+            <span class="hljs-tag">&lt;/<span class="hljs-name">/script</span>&gt;</span></code></pre>
+          </div>
+        </div>
+  <br/>   
+
             
           3. <a href="https://playcanvas.com/">PlayCanvas</a><br/>
           4. <a href="https://www.babylonjs.com/">Babylon.js</a><br/>
@@ -136,7 +137,7 @@
         <div class="d-flex">
                     <button
                       id="script-copy-btn"
-                      onclick="addToClipboard(document.getElementById('script-code'));"
+                      onclick="copyCode(this);"
                       class="btn copy-btn"
                     >
                       <i class="far fa-copy"> </i>&nbsp;<span id="copy-text">Copy</span>

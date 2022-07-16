@@ -137,16 +137,6 @@ This is a comment that can span multiple lines
         document.head.appendChild(script);
     })();*/
 
-function addToClipboard(input) {
-  /* Get the text field */
-  var copyText = input.value;
-  navigator.clipboard.writeText(copyText).then(() => {
-        document.getElementById("copy-text").innerHTML = 'Copied'
-            setTimeout(() => {
-              document.getElementById("copy-text").innerHTML = 'Copy'
-            },500)
-    });
-}
 $(document).ready(function(){
 
   textAreaAdjust(document.getElementById('script-src') );
@@ -157,31 +147,13 @@ function textAreaAdjust(o) {
   o.style.height = (o.scrollHeight)+"px";
 }
 
-const copyButtonLabel = "Copy Code";
-
-// use a class selector if available
-let blocks = document.querySelectorAll("pre");
-let parent = document.querySelectorAll(".d-flex");
-blocks.forEach((block) => {
-  // only add a button if browser supports Clipboard API
-  parent.forEach((block) => {
-  if (navigator.clipboard) {
-    let button = document.createElement("button");
-    button.innerText = copyButtonLabel;
-    button.classList.add('copy-btn')
-    button.addEventListener("click", copyCode);
-    block.appendChild(button);
-  }
-    });
-});
-
-async function copyCode(event) {
-  const button = event.srcElement;
+function copyCode(button) {
+ // const button = this;
   console.log(button.parentElement)
   const pre = button.parentElement.querySelector('pre');
   let code = pre.querySelector("code");
   let text = code.innerText;
-  await navigator.clipboard.writeText(text);
+  navigator.clipboard.writeText(text);
 }
 
 
