@@ -147,3 +147,12 @@ function addToClipboard(input) {
             },500)
     });
 }
+$(document).ready(function(){
+
+  textAreaAdjust(document.getElementById('script-src') );
+});
+
+function textAreaAdjust(o) {
+  o.style.height = "1px";
+  o.style.height = (o.scrollHeight)+"px";
+}

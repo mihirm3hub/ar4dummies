@@ -353,6 +353,7 @@ path {
   color:#DCDCDC;
   flex-direction: row;
   width:100%;
+     height:auto;
   padding: 5px;
   padding-top:10px;
   border-radius: 15px;
@@ -389,8 +390,10 @@ path {
   border:none;
   resize: none;
   width:80%;
+   height:auto;
   width: -moz-fit-content;
   font-family: aglet-mono;
   font-size:1em;
   margin-left:20px;
+  overflow:hidden;
 }
