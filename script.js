@@ -156,3 +156,30 @@ function textAreaAdjust(o) {
   o.style.height = "1px";
   o.style.height = (o.scrollHeight)+"px";
 }
+
+const copyButtonLabel = "Copy Code";
+
+// use a class selector if available
+let blocks = document.querySelectorAll("pre");
+let parent = document.querySelectorAll(".d-flex");
+blocks.forEach((block) => {
+  // only add a button if browser supports Clipboard API
+  if (navigator.clipboard) {
+    let button = document.createElement("button");
+    button.innerText = copyButtonLabel;
+    button.classList.add('copy-btn')
+    button.addEventListener("click", copyCode);
+    parent.appendChild(button);
+  }
+});
+
+async function copyCode(event) {
+  const button = event.srcElement;
+  const pre = button.parentElement;
+  let code = pre.querySelector("code");
+  let text = code.innerText;
+  await navigator.clipboard.writeText(text);
+}
+
+
+
