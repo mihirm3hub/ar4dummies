@@ -164,18 +164,21 @@ let blocks = document.querySelectorAll("pre");
 let parent = document.querySelectorAll(".d-flex");
 blocks.forEach((block) => {
   // only add a button if browser supports Clipboard API
+  parent.forEach((block) => {
   if (navigator.clipboard) {
     let button = document.createElement("button");
     button.innerText = copyButtonLabel;
     button.classList.add('copy-btn')
     button.addEventListener("click", copyCode);
-    parent.appendChild(button);
+    block.appendChild(button);
   }
+    });
 });
 
 async function copyCode(event) {
   const button = event.srcElement;
-  const pre = button.parentElement;
+  console.log( button.parentElement)
+  const pre = button.parentElement.quert;
   let code = pre.querySelector("code");
   let text = code.innerText;
   await navigator.clipboard.writeText(text);
