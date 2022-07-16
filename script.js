@@ -137,9 +137,9 @@ This is a comment that can span multiple lines
         document.head.appendChild(script);
     })();*/
 
-function addToClipboard() {
+function addToClipboard(input) {
   /* Get the text field */
-  var copyText = document.getElementById("content").value;
+  var copyText = input.value;
   navigator.clipboard.writeText(copyText).then(() => {
         document.getElementById("copy-text").innerHTML = 'Copied'
             setTimeout(() => {

@@ -370,7 +370,7 @@ path {
   cursor:pointer;
   background-color:transparent;
 }
-#code-94{
+#cdn-code{
   font-family: aglet-mono;
   background-color:#1E1E1E;
   color:#DCDCDC;
@@ -386,7 +386,7 @@ path {
   padding:5px;
   margin-left:-51px;
 }
-#content{
+.content{
   background-color:#1E1E1E;
   color:#DCDCDC;
   border:none;
