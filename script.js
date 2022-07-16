@@ -177,8 +177,8 @@ blocks.forEach((block) => {
 
 async function copyCode(event) {
   const button = event.srcElement;
-  console.log( button.parentElement)
-  const pre = button.parentElement.quert;
+  console.log(button.parentElement)
+  const pre = button.parentElement.querySelector('pre');
   let code = pre.querySelector("code");
   let text = code.innerText;
   await navigator.clipboard.writeText(text);
