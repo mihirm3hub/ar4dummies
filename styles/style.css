@@ -383,10 +383,13 @@ path {
 }
 .code{
   align-self:flex-start;
-  margin-left:-80px;
+  margin-left:-75px;
   padding:0;
   float:left;
   width:100%;
+}
+.html{
+  margin:10px;
 }
  .hljs-name {
     color: #569CD6;
@@ -397,7 +400,6 @@ path {
   color:#DCDCDC;
   width:95%;
   height:auto;
-  font-family: aglet-mono;
 }
 
 .slide {
@@ -405,4 +407,5 @@ path {
   width: 100%;
   word-wrap: break-word;
   white-space: initial;
+
 }
