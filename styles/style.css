@@ -383,10 +383,9 @@ path {
 }
 .code{
   align-self:flex-start;
-  margin-left:-100px;
+  margin-left:-80px;
   padding:0;
   float:left;
-  font-family: aglet-mono;
   width:100%;
 }
  .hljs-name {
@@ -396,7 +395,7 @@ path {
 .content{
   background-color:#1E1E1E;
   color:#DCDCDC;
-  width:99%;
+  width:95%;
   height:auto;
   font-family: aglet-mono;
 }
