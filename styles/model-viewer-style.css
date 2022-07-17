@@ -2,21 +2,12 @@ body {
   font-family: aglet-mono;
   background-color: var(--color-bg);
 }
-/* Instructions */
-.instructions {
-  margin: 1rem auto 0;
+ul {
+  background-color: var(--color-bg);
 }
-.instructions a {
-  color: magenta;
+.sticky {
+  background-color: var(--color-bg);
 }
-/* Page structure */
-.viewer-wrapper {
-  min-height: var(--wrapper-height);
-  display: grid;
-  place-items: center;
-  margin: 0 1rem;
-}
-
 .d-flex {
   background-color: #1e1e1e;
   color: #dcdcdc;
