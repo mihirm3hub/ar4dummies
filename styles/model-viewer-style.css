@@ -1,0 +1,81 @@
+body {
+  font-family: aglet-mono;
+  background-color: var(--color-bg);
+}
+/* Instructions */
+.instructions {
+  margin: 1rem auto 0;
+}
+.instructions a {
+  color: magenta;
+}
+/* Page structure */
+.viewer-wrapper {
+  min-height: var(--wrapper-height);
+  display: grid;
+  place-items: center;
+  margin: 0 1rem;
+}
+
+.d-flex {
+  background-color: #1e1e1e;
+  color: #dcdcdc;
+  flex-direction: row;
+  height: auto;
+  padding: 5px;
+  padding-top: 10px;
+  border-radius: 15px;
+}
+.d-flex strong {
+  margin-left: 20px;
+}
+.copy-btn {
+  align-self: flex-end;
+  float: right;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  color: #dcdcdc;
+  font-family: aglet-mono;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.d-flex pre {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.code {
+  align-self: flex-start;
+  margin-left: -75px;
+  padding: 0;
+  float: left;
+  width: 100%;
+}
+.html {
+  margin: 10px;
+}
+.hljs-name {
+  color: #569cd6;
+}
+.hljs-comment {
+  color: gray;
+}
+.content {
+  background-color: #1e1e1e;
+  color: #dcdcdc;
+  width: 95%;
+  height: auto;
+}
+
+.slide {
+  display: inline-block;
+  width: 100%;
+  word-wrap: break-word;
+  white-space: initial;
+}
