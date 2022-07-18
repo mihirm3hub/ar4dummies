@@ -75,6 +75,11 @@ ul {
   color:indigo;
   font-weight:900;
   padding:8px;
+  border-radius:15px;
+  border:3px solid #322620;
+  background-image: radial-gradient(circle, #00f 2%, transparent 4%), radial-gradient(circle, #00f 2%, transparent 2%);
+  background-size: 100px 100px;
+  background-position: 0 0, 50px 50px;
 }
 .shadow-style{
   border:3px solid; 
@@ -85,6 +90,6 @@ ul {
   color:Black;
 }
 .shadow-style:hover{
-    font-weight:900;
+  font-weight:900;
   background-color: #FFBF00;
 }
