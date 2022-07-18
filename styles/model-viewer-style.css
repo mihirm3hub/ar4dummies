@@ -70,8 +70,14 @@ ul {
   word-wrap: break-word;
   white-space: initial;
 }
-#challenge{
+.challenge{
   background-color: #B4FF7D;
   color:indigo;
   font-weight:900;
+  padding:8px;
+}
+.shadow-style{
+  border:3px solid; 
+  border-radius:15px;
+  box-shadow: 5px 5px black;
 }
