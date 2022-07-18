@@ -79,5 +79,18 @@ ul {
 .shadow-style{
   border:3px solid; 
   border-radius:15px;
-  box-shadow: 5px 5px black;
+}
+
+.qrBtn {
+  align-self: flex-start;
+  border: none;
+  cursor: pointer;
+    box-shadow: 0 9px #999;
+}
+.qrBtn:hover {
+  box-shadow: 0px 5px;
+}
+.qrBtn:active {
+  box-shadow: 0 5px black;
+  transform: translateY(4px);
 }
