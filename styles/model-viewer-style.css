@@ -3,10 +3,13 @@ body {
   background-color: #69e9f7;
 }
 ul {
+    background      : radial-gradient(grey 0.5px, transparent 1px);
+  background-size : 7px 7px;
   background-color: #69e9f7;
 }
 .sticky {
-  background-color: #69e9f7;
+
+  background-color: #69e9f7;  
 }
 .d-flex {
   background-color: #1e1e1e;
@@ -43,7 +46,7 @@ ul {
 }
 .code {
   align-self: flex-start;
-  margin-left: -75px;
+  margin-left: -70px;
   padding: 0;
   float: left;
   width: 100%;
@@ -52,7 +55,7 @@ ul {
   margin: 10px;
 }
 .hljs-name {
-  color: magenta;
+  color: #f92672;
 }
 .hljs-comment {
   color: gray;
@@ -77,8 +80,8 @@ ul {
   border-radius:15px;
   border:3px solid #322620;
   background      : radial-gradient(grey 0.5px, transparent 1px);
-  background-color: #B4FF7D;
   background-size : 5px 5px;
+  background-color: #B4FF7D;
 }
 .shadow-style{
   border:3px solid; 
