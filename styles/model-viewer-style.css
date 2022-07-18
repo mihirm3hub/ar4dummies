@@ -3,13 +3,18 @@ body {
   background-color: #69e9f7;
 }
 ul {
-    background      : radial-gradient(grey 0.5px, transparent 1px);
-  background-size : 7px 7px;
   background-color: #69e9f7;
 }
 .sticky {
 
   background-color: #69e9f7;  
+}
+.cc {
+  flex-shrink: 0;
+  text-decoration: none;
+  opacity: 0.5;
+  height: 2em;
+
 }
 .d-flex {
   background-color: #1e1e1e;
