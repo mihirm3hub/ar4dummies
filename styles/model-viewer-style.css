@@ -1,12 +1,12 @@
 body {
   font-family: aglet-mono;
-  background-color: var(--color-bg);
+  background-color: #69e9f7;
 }
 ul {
-  background-color: var(--color-bg);
+  background-color: #69e9f7;
 }
 .sticky {
-  background-color: var(--color-bg);
+  background-color: #69e9f7;
 }
 .d-flex {
   background-color: #1e1e1e;
@@ -52,7 +52,7 @@ ul {
   margin: 10px;
 }
 .hljs-name {
-  color: #569cd6;
+  color: magenta;
 }
 .hljs-comment {
   color: gray;
@@ -71,15 +71,14 @@ ul {
   white-space: initial;
 }
 .challenge{
-  background-color: #B4FF7D;
   color:indigo;
-  font-weight:900;
+  font-weight:bold;
   padding:8px;
   border-radius:15px;
   border:3px solid #322620;
-  background-image: radial-gradient(circle, #00f 2%, transparent 4%), radial-gradient(circle, #00f 2%, transparent 2%);
-  background-size: 100px 100px;
-  background-position: 0 0, 50px 50px;
+  background      : radial-gradient(grey 0.5px, transparent 1px);
+  background-color: #B4FF7D;
+  background-size : 5px 5px;
 }
 .shadow-style{
   border:3px solid; 
