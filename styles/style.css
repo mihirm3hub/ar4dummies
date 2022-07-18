@@ -169,11 +169,17 @@ li:last-child {
 }
 
 .footer a{
-  background-color: orange;
+  background-color: #ffd34e;
   border-radius:15px;
-  border:2px solid white;
+  border:3px solid white;
   color:Black;
 }
+
+.footer a:hover{
+  font-weight:900;
+  background-color: #FFBF00;
+}
+
 .footer .links {
   padding: 0.5rem 1rem 1.5rem;
   white-space: nowrap;
