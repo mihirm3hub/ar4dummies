@@ -102,8 +102,12 @@ ul {
 }
 
 .icon {
-  background: url('https://cdn.glitch.global/5071cd64-d9ab-4d35-9f8c-a1da345381fe/GitHub-Mark-32px.png');
-  height: 16px;
-  width: 16px;
+    background-image: url(https://cdn.glitch.global/5071cd64-d9ab-4d35-9f8c-a1da345381fe/GitHub-Mark-32px.png);
+    height: 16px;
+    width: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-right:3px;
   /* Other styles here */
 }
