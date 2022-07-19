@@ -164,7 +164,7 @@ var mybutton = document.getElementById("hoverBtn");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 100) {
+  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";
