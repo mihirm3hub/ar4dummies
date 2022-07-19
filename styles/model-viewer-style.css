@@ -101,3 +101,9 @@ ul {
   background-color: #FFBF00;
 }
 
+.icon {
+  background: url('https://cdn.glitch.global/5071cd64-d9ab-4d35-9f8c-a1da345381fe/GitHub-Mark-32px.png');
+  height: 16px;
+  width: 16px;
+  /* Other styles here */
+}
