@@ -43,9 +43,12 @@
 
     <!-- Import the webpage's stylesheet -->
     <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/model-viewer-style.css" />
     <link rel="stylesheet" href="/styles/gallery.css" />
+    <link rel="stylesheet" href="/styles/monokai.css" />
     <link rel="stylesheet" href="/styles/model-style.css" />
     <!-- Import the webpage's javascript file -->
+    <script src="https://kit.fontawesome.com/74379c72d3.js" crossorigin="anonymous"></script>
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -60,10 +63,8 @@
         <h1 class="title">Web AR for Dummies <span id="emoji">😮</span></h1>
       </a>
       <ul>
-        <li>
-          <a href="/pages/model-viewer.html" class="underAnim">model-viewer </a>
-        </li>
-        <li><a href="/pages/Zappar.html" class="underAnim line">Zappar</a></li>
+        <li><a href="/pages/model-viewer.html" class="underAnim">model-viewer</a></li>
+        <li><a href="/pages/Zappar.html" class="underAnim">Zappar</a></li>
         <li><a href="#8thwall" class="underAnim">8thwall</a></li>
         <li><a href="#Ar.js" class="underAnim">Ar.js</a></li>
       </ul>
@@ -77,62 +78,229 @@
       The elements include attributes referenced in the CSS for the page style
     -->
     <!-- The wrapper and content divs set margins and positioning -->
-    <!-- <div id="main" class="wrapper">
-      <!-- Instructions on using this project 
+   <div id="main" class="wrapper" style="margin-top:7rem">
+      <!-- Instructions on using this project -->
       <div class="instructions">
-        <h2>Getting Started  <span style="font-size: 1em;" class="blink">🧙🏼</span></h2>
+        <h2>&lt;model-viewer&gt; DIY  <span style="font-size: 1em;" class="">👨‍🔬</span></h2>
+        <h4>
+          <a class="shadow-style a_demo_four" href="#challenge">QUICK-START EXAMPLE</a><br/>
+        </h4>
+        <br/>
         <p>
-          <strong>Select a Framework</strong> which will define the structure
-          for your AR project. You can use it to build your first AR. Some prominent web AR supporting
-          <br/> 
-           frameworks are as follows
+          <strong><u>Aim</u>:</strong><br/> create a working web AR that will enable the users to view it through their native browsers.
+          <br/>The users should be able to perform basic transformations like scale, rotate, and move the object.
         </p>
-          <ol>
-          1. <a href="https://threejs.org/">Three.js</a><br/>
-          2. <a href="https://aframe.io/">A-Frame</a><br/>
-          3. <a href="https://playcanvas.com/">PlayCanvas</a><br/>
-          4. <a href="https://www.babylonjs.com/">Babylon.js</a><br/>
-          5. <a href="https://modelviewer.dev/">&lt;model-viewer&gt;</a><br/>   
-          </ol>
-         <p>
-          <strong>Select a development framework</strong> to be used to create web AR projects. 
-          You can use any IDE for your web AR developments. Web AR is supported on all major&emsp;&emsp;
+         <strong><u>Requirements</u>:</strong> 
+          <br/>
           <br/> 
-          JS development frameworks like 
-          <a href="https://www.javascript.com/">JavaScript</a>,
-          <a href="https://reactjs.org/">React</a>,
-          <a href="https://angularjs.org/">Angular</a>, etc.
-          <br/>
-          <br/>
-          <strong>integrated development environment (IDE)</strong>
-           <ol>
-          1. <a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a><br/>
-          2. <a href="https://code.visualstudio.com/">VS Code</a><br/>
-          3. <a href="https://glitch.com/">Glitch</a><br/><br/>
-          Platforms like
-          <a href="https://playcanvas.com/">PlayCanvas</a>,
-          <a href="https://www.8thwall.com/">8th Wall</a>, etc.
-          provide an in built cloud-editor as well as support for self-hosted projects.
-          </ol>     
-        </p>
-        <!-- Once you've added the button from the readme, click it in the page -->
-    <!-- Check out the function in script.js to see how it works -->
-    <!-- </div>
-    </div>-->
-    <div id="comingS">
-      <img
-        src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg"
-        alt="qr illustration"
-      />
-      <h2>Stay Tuned...</h2>
-    </div>
+          1. <a href="https://ar-m3-store-assets.s3.ap-south-1.amazonaws.com/test-scene.glb">3D model</a>
+        <a class="cc" href="https://creativecommons.org/licenses/by/2.0/" target="_blank">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" width="22px" height="22px">
+      </a>
+        <a class="cc" href="https://sketchfab.com/3d-models/obot-cute-robot-challenge-17fe944bd57941cabb698fe9d0a4f3c2" target="_blank">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" width="22px" height="22px">
+      </a><br/>
+         <br/>     
+            <div class="d-flex">
+                    <button
+                      id="cdn-copy-btn"
+                      onclick="copyCode(this);"
+                      class="btn copy-btn"
+                    >
+                      <i class="far fa-copy"> </i>&nbsp;<span id="copy-text">Copy</span>
+                    </button>          
+                    <strong>CDN</strong>
 
+           
+          <div id="code-92" class="content">
+            <pre><code class="hljs html">https://cutt.ly/MLTACDt</code></pre>
+          </div>
+        </div>
+  <br/>   
+          2. &lt;model-viewer&gt; external script<br/>
+            <br/>     
+            <div class="d-flex">
+                    <button
+                      id="script-copy-btn"
+                      onclick="copyCode(this);"
+                      class="btn copy-btn"
+                    >
+                      <i class="far fa-copy"> </i>&nbsp;<span id="copy-text">Copy</span>
+                    </button>          
+                    <strong>Script</strong>
+
+           
+          <div id="script-src" class="content">
+             <pre><code class="hljs code">
+            <span class="hljs-name">&lt;<span class="hljs-name">script</span>&gt;</span>
+            <span class="slide">
+            type="module" 
+            src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+            </span>
+            <span class="hljs-name">&lt;/<span class="hljs-name">script</span>&gt;</span>
+            </code></pre>
+          </div>
+        </div>
+        <br/>   
+
+            
+          3. &lt;model-viewer&gt; html snippet<br/>
+            <br/>     
+            <div class="d-flex">
+                    <button
+                      id="code-copy-btn"
+                      onclick="copyCode(this);"
+                      class="btn copy-btn"
+                    >
+                      <i class="far fa-copy"> </i>&nbsp;<span id="copy-text">Copy</span>
+                    </button>          
+                    <strong>Code Snippet</strong>
+
+           
+          <div id="code-src" class="content">
+            <pre><code class="hljs code">
+            <span class="hljs-name">&lt;<span class="hljs-name">model-viewer</span></span>
+            <span class="slide">
+            alt="robot model" 
+            src="https://cutt.ly/MLTACDt" 
+            ar 
+            ar-modes="webxr scene-viewer quick-look" 
+            shadow-intensity="1"
+            camera-controls 
+            enable-pan
+            </span>
+            <span class="hljs-name">&gt;&lt;/<span class="hljs-name">model-viewer</span>&gt;</span>
+            </code></pre>
+          </div>
+        </div>
+        <br/>  
+        <strong><u>Combined Code Snippet</u>:</strong> <br/>
+            <br/>     
+            <div class="d-flex">
+                    <button
+                      id="complete-copy-btn"
+                      onclick="copyCode(this);"
+                      class="btn copy-btn"
+                    >
+                      <i class="far fa-copy"> </i>&nbsp;<span id="copy-text">Copy</span>
+                    </button>          
+                    <strong>Complete Code</strong>
+
+           
+          <div id="complete-src" class="content">
+            <pre><code class="hljs code">
+            <span class="hljs-comment">&lt;<span class="hljs-comment"><i>!-- Import the component --</i></span>&gt;</span>
+            <span class="hljs-name">&lt;<span class="hljs-name">script</span>&gt;</span>
+            <span class="slide">
+            type="module" 
+            src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+            </span>
+            <span class="hljs-name">&lt;/<span class="hljs-name">script</span>&gt;</span>
+            
+            <span class="hljs-comment">&lt;<span class="hljs-comment"><i>!-- Use it like any other HTML element --</i></span>&gt;</span>
+            <span class="hljs-name">&lt;<span class="hljs-name">model-viewer</span></span>
+            <span class="slide">
+            alt="robot model" 
+            src="https://cutt.ly/MLTACDt" 
+            ar 
+            ar-modes="webxr scene-viewer quick-look" 
+            shadow-intensity="1"
+            camera-controls 
+            enable-pan
+            </span>
+            <span class="hljs-name">&gt;&lt;/<span class="hljs-name">model-viewer</span>&gt;</span>
+            </code></pre>
+          </div>
+        </div>
+        <br/>  
+
+
+          <strong><u>Procedure</u>:</strong><br/>  
+          1. Create an index.html file. <br/>
+          2. Add &lt;model-viewer&gt; external scripts.<br/>
+          3. Add &lt;model-viewer&gt; code snippet inside the body tag.<br/>
+          4. Add the above mentioned 3D asset <strong>OR</strong> add your own 3D asset to the 
+             &lt;model-viewer&gt; "src" property.<br/>
+          5. Compile and run the index.html file to view your AR.<br/>
+          <br/> 
+          <div id="challenge" class="challenge">
+          <strong><u>Challenge 1</u>:</strong><br/>
+          Create a web AR experience using model-viewer and experiment by adding various 3D assets to it.
+          <br/>
+            <br/>
+          <strong><u>Challenge 2</u>:</strong><br/>
+          Create a web AR experience using model-viewer and add an animated model to it.
+          <br/>
+          </div>
+          <br/>
+          <strong>TIPS💡:<br/>
+           - Refer the example index.html file given below.<br/>
+           - Model-viewer only supports GLTF/GLB 3D file format.<br/>
+           - Similar to HTML thus supports almost all kinds of CSS styles.<br/>
+          </strong><br/>
+          <h4><a class="shadow-style a_demo_four" href="#learn-more">Learn More</a><br/></h4>
+          <br/>
+    </div>
+    </div>
+        <div id="example-file" class="extern">
+          <h2>Example index.html file<span style="font-size: 1em;" class="">🚀</span></h2>
+         <script src="https://gist.github.com/mihirm3hub/67d2d01b32c6f6e8db2d4d62391d86e0.js"></script>  
+        </div>
+    <br/>
+
+      <div id="learn-more"  class="wrapper" style="margin-top:-3rem">
+      <!-- Instructions on using this project -->
+      <div class="instructions">
+        <div id="mv-more">
+        <h2>#More stuff about &lt;model-viewer&gt;<span style="font-size: 1em;" class="">📚</span></h2>
+        <h4>
+          <a class="shadow-style a_demo_four" href="https://modelviewer.dev/docs/">📜Docs</a><br/>
+          <br/><br/>
+          <a class="shadow-style a_demo_four" href="https://modelviewer.dev/examples/">💾Examples</a><br/>
+          <br/><br/>
+          <a class="shadow-style a_demo_four" href="https://modelviewer.dev/editor/">🖍️Editor</a><br/>
+          <br/><br/>
+          <a class="shadow-style a_demo_four" href="https://glitch.com/@Mihir-M/mv-experiments-%F0%9F%94%AC">🔬Experiments</a><br/>
+          <br/><br/>
+          <a class="shadow-style a_demo_four" href="https://github.com/google/model-viewer"><i class="icon"></i>GitHub</a><br/>
+        </h4>
+        <br/>
+        </div>
+        </div>
+       </div>
+      <!--  <p>
+          <strong><u>Aim</u>:</strong><br/> create a working web AR that will enable the users to view it through their native browsers.
+          <br/>The users should be able to perform basic <br/>transformations like scale, rotate, and move the object.
+        </p>
+         <strong><u>Requirements</u>:</strong> 
+          <br/>
+          <br/> 
+          1. <a href="https://ar-m3-store-assets.s3.ap-south-1.amazonaws.com/test-scene.glb">3D model</a><br/>
+         <br/>     
+            <div class="d-flex">
+                    <button
+                      id="cdn-copy-btn"
+                      onclick="copyCode(this);"
+                      class="btn copy-btn"
+                    >
+                      <i class="far fa-copy"> </i>&nbsp;<span id="copy-text">Copy</span>
+                    </button>          
+                    <strong>CDN</strong>
+
+           
+          <div id="code-92" class="content">
+            <pre><code class="hljs html">https://cutt.ly/MLTACDt</code></pre>
+          </div>
+        </div>
+        <br/>-->
+
+    <button onclick="topFunction()" id="hoverBtn" title="Go to top"></button>
     <!-- The footer holds our remix button — you can use it for structure or cut it out ✂ -->
     <footer class="footer">
-      <div class="links"></div>
+            <div class="links"></div>
       <a
         id="dev"
-        class="btn--remix"
+        class="a_demo_four"
         target="_top"
         href="https://linktr.ee/ambrielm3"
       >
