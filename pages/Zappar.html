@@ -236,30 +236,28 @@
           >
             <i class="far fa-copy"> </i>&nbsp;<span id="copy-text">Copy</span>
           </button>
-          <strong>Complete Code</strong>
+          <strong>Code Snippet</strong>
 
           <div id="complete-src" class="content">
             <pre><code class="hljs code">
-            <span class="hljs-comment">&lt;<span class="hljs-comment"><i>!-- Import the component --</i></span>&gt;</span>
+            <span class="hljs-comment">&lt;<span class="hljs-comment"><i>!-- UI for the user to tap to place the 3D object --</i></span>&gt;</span>
+            <span class="hljs-name">&lt;<span class="hljs-name">div id="zappar-placement-ui"</span>&gt;</span>Tap here to place the object<span class="hljs-name">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            
             <span class="hljs-name">&lt;<span class="hljs-name">script</span>&gt;</span>
             <span class="slide">
-            type="module" 
-            src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+            <span class="hljs-comment"><span class="hljs-comment"><i>// Listen for when the user taps the UI</i></span></span>                   
+            <br/> const placementUI = document.getElementById("zappar-placement-ui");<br/>    
+            placementUI.addEventListener("click", function() {<br/>    
+            <span class="hljs-comment"><span class="hljs-comment"><i>// Set placement mode to false on our instant tracker</i></span></span>            
+            <br/>
+            const instantTracker = document.getElementById("instant-tracker");<br/>   
+            instantTracker.setAttribute("zappar-instant", "placement-mode: false");<br/>     
+            <span class="hljs-comment"><span class="hljs-comment"><i>// And remove the placement UI</i></span></span>             
+            <br/>
+            placementUI.remove();
+        });
             </span>
             <span class="hljs-name">&lt;/<span class="hljs-name">script</span>&gt;</span>
-            
-            <span class="hljs-comment">&lt;<span class="hljs-comment"><i>!-- Use it like any other HTML element --</i></span>&gt;</span>
-            <span class="hljs-name">&lt;<span class="hljs-name">model-viewer</span></span>
-            <span class="slide">
-            alt="robot model" 
-            src="https://cutt.ly/MLTACDt" 
-            ar 
-            ar-modes="webxr scene-viewer quick-look" 
-            shadow-intensity="1"
-            camera-controls 
-            enable-pan
-            </span>
-            <span class="hljs-name">&gt;&lt;/<span class="hljs-name">model-viewer</span>&gt;</span>
             </code></pre>
           </div>
         </div>
