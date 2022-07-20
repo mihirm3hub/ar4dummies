@@ -160,7 +160,7 @@
           </div>
         </div>
         <br />
-        2. &lt;model-viewer&gt; external script<br />
+        2. A-frame and Zappar external script<br />
         <br />
         <div class="d-flex">
           <button
@@ -174,10 +174,17 @@
 
           <div id="script-src" class="content">
             <pre><code class="hljs code">
+            <span class="hljs-comment">&lt;<span class="hljs-comment"><i>!-- Import A-frame --</i></span>&gt;</span>
             <span class="hljs-name">&lt;<span class="hljs-name">script</span>&gt;</span>
             <span class="slide">
-            type="module" 
-            src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+            src="https://aframe.io/releases/1.2.0/aframe.min.js"
+            </span>
+            <span class="hljs-name">&lt;/<span class="hljs-name">script</span>&gt;</span>
+            
+            <span class="hljs-comment">&lt;<span class="hljs-comment"><i>!-- Import Zappar-aframe --</i></span>&gt;</span>
+            <span class="hljs-name">&lt;<span class="hljs-name">script</span>&gt;</span>
+            <span class="slide">
+            src="https://libs.zappar.com/zappar-aframe/0.3.36/zappar-aframe.js"
             </span>
             <span class="hljs-name">&lt;/<span class="hljs-name">script</span>&gt;</span>
             </code></pre>
