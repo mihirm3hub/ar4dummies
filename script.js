@@ -10,14 +10,6 @@ console.log("Hello 🌎");
 Make the "Click me!" button move when the visitor clicks it:
 - First add the button to the page by following the "Next steps" in the README
 */
-const btn = document.querySelector("#qrBtn"); // Get the button from the page
-// Detect clicks on the button
-if (btn) {
-  btn.onclick = function () {
-    console.log("clicked");
-  };
-}
-
 const emoji = document.querySelector("#emoji");
 if (emoji) {
   const getRandomEmoji = () => {
@@ -119,23 +111,6 @@ if (emoji) {
   setInterval(getRandomEmoji, 1000);
 }
 // This is a single line JS comment
-/*
-This is a comment that can span multiple lines 
-- use comments to make your own notes!
-
-    (function () {
-        var script = document.createElement("script");
-        script.onload = function () {
-            var stats = new Stats();
-            document.body.appendChild(stats.dom);
-            requestAnimationFrame(function loop() {
-                stats.update();
-                requestAnimationFrame(loop);
-            });
-        };
-        script.src = "//mrdoob.github.io/stats.js/build/stats.min.js";
-        document.head.appendChild(script);
-    })();*/
 
 
 function copyCode(button) {
@@ -176,3 +151,21 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+/*
+This is a comment that can span multiple lines 
+- use comments to make your own notes!
+
+    (function () {
+        var script = document.createElement("script");
+        script.onload = function () {
+            var stats = new Stats();
+            document.body.appendChild(stats.dom);
+            requestAnimationFrame(function loop() {
+                stats.update();
+                requestAnimationFrame(loop);
+            });
+        };
+        script.src = "//mrdoob.github.io/stats.js/build/stats.min.js";
+        document.head.appendChild(script);
+    })();*/
