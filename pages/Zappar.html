@@ -193,23 +193,6 @@
         <br />
 
         3. Zappar instant-tracking code snippet<br />
-            <a-scene>
-        <!-- Ask user for camera permissions, display some text if permission is denied -->
-        <a-entity zappar-permissions-ui id="permissions"></a-entity>
-        <!-- shows a full-page dialog that informs the user they're using an unsupported browser -->
-        <a-entity zappar-compatibility-ui id="compatibility"></a-entity>
-
-        <a-camera zappar-camera />
-
-        <!-- Setup our instant tracker and start it in placement mode so the user can -->
-        <!-- choose a location for the object -->
-        <a-entity zappar-instant="placement-mode: true" id="instant-tracker">
-
-            <!-- Include a 3D model inside our instant tracker -->
-            <a-entity gltf-model="url(assets/waving.glb)"></a-entity>
-
-        </a-entity>
-    </a-scene>
         <br />
         <div class="d-flex">
           <button
@@ -223,20 +206,27 @@
 
           <div id="code-src" class="content">
             <pre><code class="hljs code">
-            <span class="hljs-name">&lt;<span class="hljs-name">a-scene</span></span>
-            <span class="hljs-name">&lt;<span class="hljs-name">a-entity zappar-permissions-ui id="permissions"</span></span>
-            <span class="hljs-name">&lt;<span class="hljs-name">a-entity zappar-compatibility-ui id="compatibility"</span></span>
-            <span class="hljs-name">&lt;<span class="hljs-name">a-camera zappar-camera /</span>&gt;</span>
-            <span class="hljs-name">&lt;<span class="hljs-name">a-entity zappar-instant="placement-mode: true" id="instant-tracker"</span></span>
-               <span class="hljs-name">&lt;<span class="hljs-name">a-entity gltf-model="url(assets/waving.glb)"</span></span>
-               <span class="hljs-name">&gt;&lt;/<span class="hljs-name">a-entity</span>&gt;</span>
-            <span class="hljs-name">&gt;&lt;/<span class="hljs-name">a-entity</span>&gt;</span>
-            <span class="hljs-name">&gt;&lt;/<span class="hljs-name">a-scene</span>&gt;</span>
+            <span class="hljs-name">&lt;<span class="hljs-name">a-scene</span>&gt;</span>
+              <span class="hljs-comment">&lt;<span class="hljs-comment"><i>!-- Ask user for camera permissions, display some text if permission is denied --</i></span>&gt;</span>
+              <span class="hljs-name">&lt;<span class="hljs-name">a-entity zappar-permissions-ui id="permissions"</span>&gt;</span><span class="hljs-name">&lt;/<span class="hljs-name">a-entity</span>&gt;</span>
+              <span class="hljs-comment">&lt;<span class="hljs-comment"><i>!-- shows a full-page dialog that informs the user they're using an unsupported browser --</i></span>&gt;</span>
+              <span class="hljs-name">&lt;<span class="hljs-name">a-entity zappar-compatibility-ui id="compatibility"</span>&gt;</span><span class="hljs-name">&lt;/<span class="hljs-name">a-entity</span>&gt;</span>
+            
+              <span class="hljs-name">&lt;<span class="hljs-name">a-camera zappar-camera /</span>&gt;</span>
+              
+              <span class="hljs-comment">&lt;<span class="hljs-comment"><i>!-- Setup our instant tracker and start it in placement mode so the user can --</i></span>&gt;</span>
+              <span class="hljs-comment">&lt;<span class="hljs-comment"><i>!-- choose a location for the object --</i></span>&gt;</span>
+              <span class="hljs-name">&lt;<span class="hljs-name">a-entity zappar-instant="placement-mode: true" id="instant-tracker"</span></span>
+                 <span class="hljs-comment">&lt;<span class="hljs-comment"><i>!-- Include a 3D model inside the instant tracker entity --</i></span>&gt;</span>
+                 <span class="hljs-name">&lt;<span class="hljs-name">a-entity gltf-model="url(https://cutt.ly/MLTACDt)"</span></span><span class="hljs-name">&gt;&lt;/<span class="hljs-name">a-entity</span>&gt;</span>                    
+              <span class="hljs-name">&lt;/<span class="hljs-name">a-entity</span>&gt;</span>
+              
+            <span class="hljs-name">&lt;/<span class="hljs-name">a-scene</span>&gt;</span>
             </code></pre>
           </div>
         </div>
         <br />
-        <strong><u>Combined Code Snippet</u>:</strong> <br />
+        <strong><u>Create Placement functionality</u>:</strong> <br />
         <br />
         <div class="d-flex">
           <button
@@ -311,7 +301,7 @@
       <h2>
         Example index.html file<span style="font-size: 1em" class="">🚀</span>
       </h2>
-      <script src="https://gist.github.com/mihirm3hub/67d2d01b32c6f6e8db2d4d62391d86e0.js"></script>
+      <script src="https://gist.github.com/mihirm3hub/b81d6411eb07c771cf569bf1f7c8f25f.js"></script>
     </div>
     <br />
 
