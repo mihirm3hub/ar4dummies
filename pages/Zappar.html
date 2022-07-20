@@ -192,7 +192,24 @@
         </div>
         <br />
 
-        3. &lt;model-viewer&gt; html snippet<br />
+        3. Zappar instant-tracking code snippet<br />
+            <a-scene>
+        <!-- Ask user for camera permissions, display some text if permission is denied -->
+        <a-entity zappar-permissions-ui id="permissions"></a-entity>
+        <!-- shows a full-page dialog that informs the user they're using an unsupported browser -->
+        <a-entity zappar-compatibility-ui id="compatibility"></a-entity>
+
+        <a-camera zappar-camera />
+
+        <!-- Setup our instant tracker and start it in placement mode so the user can -->
+        <!-- choose a location for the object -->
+        <a-entity zappar-instant="placement-mode: true" id="instant-tracker">
+
+            <!-- Include a 3D model inside our instant tracker -->
+            <a-entity gltf-model="url(assets/waving.glb)"></a-entity>
+
+        </a-entity>
+    </a-scene>
         <br />
         <div class="d-flex">
           <button
@@ -206,17 +223,15 @@
 
           <div id="code-src" class="content">
             <pre><code class="hljs code">
-            <span class="hljs-name">&lt;<span class="hljs-name">model-viewer</span></span>
-            <span class="slide">
-            alt="robot model" 
-            src="https://cutt.ly/MLTACDt" 
-            ar 
-            ar-modes="webxr scene-viewer quick-look" 
-            shadow-intensity="1"
-            camera-controls 
-            enable-pan
-            </span>
-            <span class="hljs-name">&gt;&lt;/<span class="hljs-name">model-viewer</span>&gt;</span>
+            <span class="hljs-name">&lt;<span class="hljs-name">a-scene</span></span>
+            <span class="hljs-name">&lt;<span class="hljs-name">a-entity zappar-permissions-ui id="permissions"</span></span>
+            <span class="hljs-name">&lt;<span class="hljs-name">a-entity zappar-compatibility-ui id="compatibility"</span></span>
+            <span class="hljs-name">&lt;<span class="hljs-name">a-camera zappar-camera /</span>&gt;</span>
+            <span class="hljs-name">&lt;<span class="hljs-name">a-entity zappar-instant="placement-mode: true" id="instant-tracker"</span></span>
+               <span class="hljs-name">&lt;<span class="hljs-name">a-entity gltf-model="url(assets/waving.glb)"</span></span>
+               <span class="hljs-name">&gt;&lt;/<span class="hljs-name">a-entity</span>&gt;</span>
+            <span class="hljs-name">&gt;&lt;/<span class="hljs-name">a-entity</span>&gt;</span>
+            <span class="hljs-name">&gt;&lt;/<span class="hljs-name">a-scene</span>&gt;</span>
             </code></pre>
           </div>
         </div>
