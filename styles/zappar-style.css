@@ -6,15 +6,13 @@ ul {
   background-color: #fc816f;
 }
 .sticky {
-
-  background-color: #fc816f;  
+  background-color: #fc816f;
 }
 .cc {
   flex-shrink: 0;
   text-decoration: none;
   opacity: 0.5;
   height: 2em;
-
 }
 .d-flex {
   background-color: #1e1e1e;
@@ -78,52 +76,57 @@ ul {
   word-wrap: break-word;
   white-space: initial;
 }
-.challenge{
-  color:indigo;
-  font-weight:bold;
-  padding:8px;
-  border-radius:15px;
-  border:3px solid #322620;
-  background      : radial-gradient(grey 0.5px, transparent 1px);
-  background-size : 5px 5px;
-  background-color: #B4FF7D;
+.challenge {
+  color: indigo;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 15px;
+  border: 3px solid #322620;
+  background: radial-gradient(grey 0.5px, transparent 1px);
+  background-size: 5px 5px;
+  background-color: #b4ff7d;
 }
-.shadow-style{
-  border:3px solid; 
-  border-radius:15px;
+.shadow-style {
+  border: 3px solid;
+  border-radius: 15px;
   background-color: #ffdd76;
-  border-radius:15px;
-  border:3px solid white;
-  color:Black;
+  border-radius: 15px;
+  border: 3px solid white;
+  color: Black;
 }
-.shadow-style:hover{
-  font-weight:900;
-  background-color: #FFBF00;
+.shadow-style:hover {
+  font-weight: 900;
+  background-color: #ffbf00;
 }
 
 .icon {
-    background-image: url(https://cdn.glitch.global/5071cd64-d9ab-4d35-9f8c-a1da345381fe/GitHub-Mark-32px.png);
-    height: 16px;
-    width: 16px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: inline-block;
-    margin-right:3px;
+  background-image: url(https://cdn.glitch.global/5071cd64-d9ab-4d35-9f8c-a1da345381fe/GitHub-Mark-32px.png);
+  height: 16px;
+  width: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin-right: 3px;
   /* Other styles here */
 }
 
 .zap_a {
-	text-decoration:none;
-	color:#fff;
-	position:relative;
-	padding:10px 20px;
-	 border:3px solid white;
-	box-shadow: inset 0px 1px 0px #808080, 0px 5px 0px 0px #404040, 0px 10px 5px #8c5951;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  padding: 10px 20px;
+  border: 3px solid white;
+  box-shadow: inset 0px 1px 0px #808080, 0px 5px 0px 0px #404040,
+    0px 10px 5px #8c5951;
 }
 
 .zap_a:active {
-	top:3px;
-	background-image: linear-gradient(bottom, rgb(62,51,46) 100%, rgb(101,86,78) 0%);
-	box-shadow: inset 0px 1px 0px #9e8d84, 0px 2px 0px 0px #322620, 0px 5px 3px #8c5951;
+  top: 3px;
+  background-image: linear-gradient(
+    bottom,
+    rgb(62, 51, 46) 100%,
+    rgb(101, 86, 78) 0%
+  );
+  box-shadow: inset 0px 1px 0px #9e8d84, 0px 2px 0px 0px #322620,
+    0px 5px 3px #8c5951;
 }
-

@@ -83,11 +83,11 @@
   #code-94 {
     width: 70%;
   }
-  .extern{
-  width: 100%;
-  display: grid;
-  place-items: center;
-  margin: 0 1rem;
+  .extern {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin: 0 1rem;
   }
 }
 @media only screen and (max-width: 900px) {
@@ -139,6 +139,11 @@
   }
   #code-94 {
     width: 100%;
+  }
+  .content {
+    width: 20em;
+    overflow-x: auto;
+    white-space: nowrap;
   }
 }
 #qrBox {
