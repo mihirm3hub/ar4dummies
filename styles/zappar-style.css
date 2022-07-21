@@ -49,9 +49,7 @@ ul {
 }
 .code {
   align-self: flex-start;
-  margin-left: -70px;
   padding: 0;
-  float: left;
   width: 100%;
 }
 .html {
@@ -66,7 +64,7 @@ ul {
 .content {
   background-color: #1e1e1e;
   color: #dcdcdc;
-  width: 95%;
+  width: 100%;
   height: auto;
 }
 
@@ -137,6 +135,6 @@ ul {
   padding:5px;
   border-radius:5px;
 }
-.gist-meta,{
+.gist-meta{
   display:none;
 }
