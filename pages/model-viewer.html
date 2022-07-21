@@ -48,7 +48,10 @@
     <link rel="stylesheet" href="/styles/model-style.css" />
     <link rel="stylesheet" href="/styles/model-viewer-style.css" />
     <!-- Import the webpage's javascript file -->
-    <script src="https://kit.fontawesome.com/74379c72d3.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/74379c72d3.js"
+      crossorigin="anonymous"
+    ></script>
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -63,7 +66,9 @@
         <h1 class="title">Web AR for Dummies <span id="emoji">😮</span></h1>
       </a>
       <ul>
-        <li><a href="/pages/model-viewer.html" class="underAnim">model-viewer</a></li>
+        <li>
+          <a href="/pages/model-viewer.html" class="underAnim">model-viewer</a>
+        </li>
         <li><a href="/pages/Zappar.html" class="underAnim">Zappar</a></li>
         <li><a href="#8thwall" class="underAnim">8thwall</a></li>
         <li><a href="#Ar.js" class="underAnim">Ar.js</a></li>
@@ -78,60 +83,87 @@
       The elements include attributes referenced in the CSS for the page style
     -->
     <!-- The wrapper and content divs set margins and positioning -->
-   <div id="main" class="wrapper" style="margin-top:7rem">
+    <div id="main" class="wrapper" style="margin-top: 7rem">
       <!-- Instructions on using this project -->
       <div class="instructions">
-        <h2>&lt;model-viewer&gt; DIY  <span style="font-size: 1em;" class="">👨‍🔬</span></h2>
+        <h2>
+          &lt;model-viewer&gt; DIY
+          <span style="font-size: 1em" class="">👨‍🔬</span>
+        </h2>
         <h4>
-          <a class="shadow-style a_demo_four" href="#challenge">QUICK-START EXAMPLE</a><br/>
+          <a class="shadow-style a_demo_four" href="#challenge">QUICK-START EXAMPLE</a
+          ><br /><br />
         </h4>
-        <br/>
+        <h4>
+          <a class="shadow-style a_demo_four" href="#learn-more">Learn More</a><br />
+        </h4>
+        <br />
         <p>
-          <strong><u>Aim</u>:</strong><br/> create a working web AR that will enable the users to view it through their native browsers.
-          <br/>The users should be able to perform basic transformations like scale, rotate, and move the object.
+          <strong><u>Aim</u>:</strong><br />
+          create a working web AR that will enable the users to view it through
+          their native browsers. <br />The users should be able to perform basic
+          transformations like scale, rotate, and move the object.
         </p>
-         <strong><u>Requirements</u>:</strong> 
-          <br/>
-          <br/> 
-          1. <a href="https://ar-m3-store-assets.s3.ap-south-1.amazonaws.com/test-scene.glb">3D model</a>
-        <a class="cc" href="https://creativecommons.org/licenses/by/2.0/" target="_blank">
-        <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" width="22px" height="22px">
-      </a>
-        <a class="cc" href="https://sketchfab.com/3d-models/obot-cute-robot-challenge-17fe944bd57941cabb698fe9d0a4f3c2" target="_blank">
-        <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" width="22px" height="22px">
-      </a><br/>
-         <br/>     
-            <div class="d-flex">
-                    <button
-                      id="cdn-copy-btn"
-                      onclick="copyCode(this);"
-                      class="btn copy-btn"
-                    >
-                      <i class="far fa-copy"> </i>&nbsp;<span id="copy-text">Copy</span>
-                    </button>          
-                    <strong>CDN</strong>
+        <strong><u>Requirements</u>:</strong>
+        <br />
+        <br />
+        1.
+        <a
+          href="https://ar-m3-store-assets.s3.ap-south-1.amazonaws.com/test-scene.glb"
+          >3D model</a
+        >
+        <a
+          class="cc"
+          href="https://creativecommons.org/licenses/by/2.0/"
+          target="_blank"
+        >
+          <img
+            src="https://mirrors.creativecommons.org/presskit/icons/cc.svg"
+            width="22px"
+            height="22px"
+          />
+        </a>
+        <a
+          class="cc"
+          href="https://sketchfab.com/3d-models/obot-cute-robot-challenge-17fe944bd57941cabb698fe9d0a4f3c2"
+          target="_blank"
+        >
+          <img
+            src="https://mirrors.creativecommons.org/presskit/icons/by.svg"
+            width="22px"
+            height="22px"
+          /> </a
+        ><br />
+        <br />
+        <div class="d-flex">
+          <button
+            id="cdn-copy-btn"
+            onclick="copyCode(this);"
+            class="btn copy-btn"
+          >
+            <i class="far fa-copy"> </i>&nbsp;<span id="copy-text">Copy</span>
+          </button>
+          <strong>CDN</strong>
 
-           
           <div id="code-92" class="content">
             <pre><code class="hljs html">https://cutt.ly/MLTACDt</code></pre>
           </div>
         </div>
-  <br/>   
-          2. &lt;model-viewer&gt; external script<br/>
-            <br/>     
-            <div class="d-flex">
-                    <button
-                      id="script-copy-btn"
-                      onclick="copyCode(this);"
-                      class="btn copy-btn"
-                    >
-                      <i class="far fa-copy"> </i>&nbsp;<span id="copy-text">Copy</span>
-                    </button>          
-                    <strong>Script</strong>
+        <br />
+        2. &lt;model-viewer&gt; external script<br />
+        <br />
+        <div class="d-flex">
+          <button
+            id="script-copy-btn"
+            onclick="copyCode(this);"
+            class="btn copy-btn"
+          >
+            <i class="far fa-copy"> </i>&nbsp;<span id="copy-text">Copy</span>
+          </button>
+          <strong>Script</strong>
 
-           
           <div id="script-src" class="content">
-             <pre><code class="hljs code">
+            <pre><code class="hljs code">
             <span class="hljs-name">&lt;<span class="hljs-name">script</span>&gt;</span>
             <span class="slide">
             type="module" 
@@ -141,22 +173,20 @@
             </code></pre>
           </div>
         </div>
-        <br/>   
+        <br />
 
-            
-          3. &lt;model-viewer&gt; html snippet<br/>
-            <br/>     
-            <div class="d-flex">
-                    <button
-                      id="code-copy-btn"
-                      onclick="copyCode(this);"
-                      class="btn copy-btn"
-                    >
-                      <i class="far fa-copy"> </i>&nbsp;<span id="copy-text">Copy</span>
-                    </button>          
-                    <strong>Code Snippet</strong>
+        3. &lt;model-viewer&gt; html snippet<br />
+        <br />
+        <div class="d-flex">
+          <button
+            id="code-copy-btn"
+            onclick="copyCode(this);"
+            class="btn copy-btn"
+          >
+            <i class="far fa-copy"> </i>&nbsp;<span id="copy-text">Copy</span>
+          </button>
+          <strong>Code Snippet</strong>
 
-           
           <div id="code-src" class="content">
             <pre><code class="hljs code">
             <span class="hljs-name">&lt;<span class="hljs-name">model-viewer</span></span>
@@ -173,20 +203,19 @@
             </code></pre>
           </div>
         </div>
-        <br/>  
-        <strong><u>Combined Code Snippet</u>:</strong> <br/>
-            <br/>     
-            <div class="d-flex">
-                    <button
-                      id="complete-copy-btn"
-                      onclick="copyCode(this);"
-                      class="btn copy-btn"
-                    >
-                      <i class="far fa-copy"> </i>&nbsp;<span id="copy-text">Copy</span>
-                    </button>          
-                    <strong>Complete Code</strong>
+        <br />
+        <strong><u>Combined Code Snippet</u>:</strong> <br />
+        <br />
+        <div class="d-flex">
+          <button
+            id="complete-copy-btn"
+            onclick="copyCode(this);"
+            class="btn copy-btn"
+          >
+            <i class="far fa-copy"> </i>&nbsp;<span id="copy-text">Copy</span>
+          </button>
+          <strong>Complete Code</strong>
 
-           
           <div id="complete-src" class="content">
             <pre><code class="hljs code">
             <span class="hljs-comment">&lt;<span class="hljs-comment"><i>!-- Import the component --</i></span>&gt;</span>
@@ -212,63 +241,91 @@
             </code></pre>
           </div>
         </div>
-        <br/>  
+        <br />
 
-
-          <strong><u>Procedure</u>:</strong><br/>  
-          1. Create an index.html file. <br/>
-          2. Add &lt;model-viewer&gt; external scripts.<br/>
-          3. Add &lt;model-viewer&gt; code snippet inside the body tag.<br/>
-          4. Add the above mentioned 3D asset <strong>OR</strong> add your own 3D asset to the 
-             &lt;model-viewer&gt; "src" property.<br/>
-          5. Compile and run the index.html file to view your AR.<br/>
-          <br/> 
-          <div id="challenge" class="challenge">
-          <strong><u>Challenge 1</u>:</strong><br/>
-          Create a web AR experience using model-viewer and experiment by adding various 3D assets to it.
-          <br/>
-            <br/>
-          <strong><u>Challenge 2</u>:</strong><br/>
-          Create a web AR experience using model-viewer and add an animated model to it.
-          <br/>
-          </div>
-          <br/>
-          <strong>TIPS💡:<br/>
-           - Refer the example index.html file given below.<br/>
-           - Model-viewer only supports GLTF/GLB 3D file format.<br/>
-           - Similar to HTML thus supports almost all kinds of CSS styles.<br/>
-          </strong><br/>
-          <h4><a class="shadow-style a_demo_four" href="#learn-more">Learn More</a><br/></h4>
-          <br/>
-    </div>
-    </div>
-        <div id="example-file" class="extern">
-          <h2>Example index.html file<span style="font-size: 1em;" class="">🚀</span></h2>
-         <script src="https://gist.github.com/mihirm3hub/67d2d01b32c6f6e8db2d4d62391d86e0.js"></script>  
+        <strong><u>Procedure</u>:</strong><br />
+        1. Create an index.html file. <br />
+        2. Add &lt;model-viewer&gt; external scripts.<br />
+        3. Add &lt;model-viewer&gt; code snippet inside the body tag.<br />
+        4. Add the above mentioned 3D asset <strong>OR</strong> add your own 3D
+        asset to the &lt;model-viewer&gt; "src" property.<br />
+        5. Compile and run the index.html file to view your AR.<br />
+        <br />
+        <div id="challenge" class="challenge">
+          <strong><u>Challenge 1</u>:</strong><br />
+          Create a web AR experience using model-viewer and experiment by adding
+          various 3D assets to it.
+          <br />
+          <br />
+          <strong><u>Challenge 2</u>:</strong><br />
+          Create a web AR experience using model-viewer and add an animated
+          model to it.
+          <br />
         </div>
-    <br/>
+        <br />
+        <strong
+          >TIPS💡:<br />
+          - Refer the example index.html file given below.<br />
+          - Model-viewer only supports GLTF/GLB 3D file format.<br />
+          - Similar to HTML thus supports almost all kinds of CSS styles.<br /> </strong
+        ><br />
+      </div>
+    </div>
+    <div id="example-file" class="extern">
+      <h2>
+        Example index.html file<span style="font-size: 1em" class="">🚀</span>
+      </h2>
+      <script src="https://gist.github.com/mihirm3hub/67d2d01b32c6f6e8db2d4d62391d86e0.js"></script>
+    </div>
+    <br />
 
-      <div id="learn-more"  class="wrapper" style="margin-top:-3rem">
+    <div id="learn-more" class="wrapper" style="margin-top: -3rem">
       <!-- Instructions on using this project -->
       <div class="instructions">
         <div id="mv-more">
-        <h2>#More stuff about &lt;model-viewer&gt;<span style="font-size: 1em;" class="">📚</span></h2>
-        <h4>
-          <a class="shadow-style a_demo_four" href="https://modelviewer.dev/docs/">📜Docs</a><br/>
-          <br/><br/>
-          <a class="shadow-style a_demo_four" href="https://modelviewer.dev/examples/">💾Examples</a><br/>
-          <br/><br/>
-          <a class="shadow-style a_demo_four" href="https://modelviewer.dev/editor/">🖍️Editor</a><br/>
-          <br/><br/>
-          <a class="shadow-style a_demo_four" href="https://glitch.com/@Mihir-M/mv-experiments-%F0%9F%94%AC">🔬Experiments</a><br/>
-          <br/><br/>
-          <a class="shadow-style a_demo_four" href="https://github.com/google/model-viewer"><i class="icon"></i>GitHub</a><br/>
-        </h4>
-        <br/>
+          <h2>
+            #More stuff about &lt;model-viewer&gt;<span
+              style="font-size: 1em"
+              class=""
+              >📚</span
+            >
+          </h2>
+          <h4>
+            <a
+              class="shadow-style a_demo_four"
+              href="https://modelviewer.dev/docs/"
+              >📜Docs</a
+            ><br />
+            <br /><br />
+            <a
+              class="shadow-style a_demo_four"
+              href="https://modelviewer.dev/examples/"
+              >💾Examples</a
+            ><br />
+            <br /><br />
+            <a
+              class="shadow-style a_demo_four"
+              href="https://modelviewer.dev/editor/"
+              >🖍️Editor</a
+            ><br />
+            <br /><br />
+            <a
+              class="shadow-style a_demo_four"
+              href="https://glitch.com/@Mihir-M/mv-experiments-%F0%9F%94%AC"
+              >🔬Experiments</a
+            ><br />
+            <br /><br />
+            <a
+              class="shadow-style a_demo_four"
+              href="https://github.com/google/model-viewer"
+              ><i class="icon"></i>GitHub</a
+            ><br />
+          </h4>
+          <br />
         </div>
-        </div>
-       </div>
-      <!--  <p>
+      </div>
+    </div>
+    <!--  <p>
           <strong><u>Aim</u>:</strong><br/> create a working web AR that will enable the users to view it through their native browsers.
           <br/>The users should be able to perform basic <br/>transformations like scale, rotate, and move the object.
         </p>
@@ -297,7 +354,7 @@
     <button onclick="topFunction()" id="hoverBtn" title="Go to top"></button>
     <!-- The footer holds our remix button — you can use it for structure or cut it out ✂ -->
     <footer class="footer">
-            <div class="links"></div>
+      <div class="links"></div>
       <a
         id="dev"
         class="a_demo_four"
