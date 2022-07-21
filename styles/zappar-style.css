@@ -26,6 +26,10 @@ ul {
 .d-flex strong {
   margin-left: 20px;
 }
+.d-flex h2{
+  margin-left: 20px;
+  color: #dcdcdc;
+}
 .copy-btn {
   align-self: flex-end;
   float: right;
