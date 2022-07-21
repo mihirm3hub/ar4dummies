@@ -130,10 +130,13 @@ ul {
   box-shadow: inset 0px 1px 0px #9e8d84, 0px 2px 0px 0px #322620,
     0px 5px 3px #8c5951;
 }
-#mark{
+.mark{
   background-color: gray;
   color:white;
   letter-spacing: 1px;
   padding:5px;
   border-radius:5px;
+}
+.gist-meta,{
+  display:none;
 }
