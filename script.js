@@ -130,6 +130,23 @@ function copyCode(button) {
     });
 }
 
+function copyGist(button) {
+ // const button = this;
+  console.log(button.parentElement)
+  const pre = button.parentElement.querySelector('#gistParent');
+  const copyText = button.parentElement.querySelector('#copy-text');
+  let code = pre.querySelector("code");
+  let text = code.innerText;
+  navigator.clipboard.writeText(text).then(() => {
+        // Alert the user that the action took place.
+        // Nobody likes hidden stuff being done under the hood!
+        copyText.innerHTML ="Copied"
+         setTimeout(() => {
+           copyText.innerHTML ="Copy"
+         },500)
+    });
+}
+
 
 
 //Get the button

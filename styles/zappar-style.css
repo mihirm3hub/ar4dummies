@@ -138,3 +138,6 @@ ul {
 .content{
   width: 20em;
 }
+#gistParent .gist-meta{
+  display:none;
+}

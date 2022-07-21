@@ -2,7 +2,7 @@ body .gist .gist-file {
   border:none;
 }
 body .gist .highlight {
-    background: #272822;
+    background: #1e1e1e;
 }
 body .gist .blob-num,
 body .gist .blob-code-inner,
