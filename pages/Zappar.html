@@ -108,8 +108,11 @@
         </p>
         <br />
         <h4>
-          <a class="shadow-style zap_a" href="#challenge">QUICK-START EXAMPLE</a
-          ><br />
+          <a class="shadow-style zap_a" href="#example">QUICK-START EXAMPLE</a
+          ><br /><br />
+        </h4>
+        <h4>
+          <a class="shadow-style zap_a" href="#learn-more">Learn More</a><br />
         </h4>
         <br />
         <p>
@@ -297,8 +300,8 @@
           - GLTF/GLB 3D file format recommended for 3D assets.<br />
           - Support almost all functionalities offered by A-frame including
           entity registration.<br /><br />
-          - For creating transformations:<br /><br /> </strong
-        >
+          - For creating transformations:<br /><br />
+        </strong>
       </div>
     </div>
     <div class="extern">
@@ -320,14 +323,31 @@
         </div>
       </div>
     </div>
-    <div class="instructions">
-    <h4>
-      <a class="shadow-style zap_a" href="#learn-more">Learn More</a><br />
-    </h4>
-    </div>
-    <br />
     <br />
     <div class="extern">
+      <div id="rotation-file" class="d-flex">
+        <button
+          id="rotate-copy-btn"
+          onclick="copyGist(this);"
+          class="btn copy-btn"
+        >
+          <i class="far fa-copy"> </i>&nbsp;<span id="copy-text">Copy</span>
+        </button>
+        <strong>Rotation Component</strong>
+        <br />
+        <br />
+        <div id="gistParent">
+          <code class="code">
+            <script src="https://gist.github.com/mihirm3hub/9bc76eba14e00715449ec158b7e58052.js"></script>
+          </code>
+        </div>
+      </div>
+      <div class="instructions" style="self-align: flex-start"></div>
+    </div>
+
+    <br />
+    <br />
+    <div id="example" class="extern">
       <div id="example-file" class="d-flex">
         <button
           id="example-copy-btn"
@@ -360,13 +380,13 @@
             >
           </h2>
           <h4>
-            <a class="shadow-style zap_a" href="https://modelviewer.dev/docs/"
+            <a class="shadow-style zap_a" href="https://docs.zap.works/universal-ar/a-frame/"
               >📜Docs</a
             ><br />
             <br /><br />
             <a
               class="shadow-style zap_a"
-              href="https://modelviewer.dev/examples/"
+              href="https://docs.zap.works/universal-ar/a-frame/example-projects/"
               >💾Examples</a
             ><br />
             <br /><br />
