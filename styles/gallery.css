@@ -131,32 +131,8 @@
   #comingS h2 {
     font-size: 2em;
   }
-path {
-  stroke-width: 4px;
-}
-    #blob-top {
-    z-index: -1;
-    width: 350px;
-    position: absolute;
-  }
-  #blob-top1 {
-    z-index: -1;
-    width: 250px;
-    position: absolute;
-    -webkit-transform: rotate(20deg);
-    transform: rotate(20deg);
-  }
-  #blob-bot {
-    z-index: -1;
-    top: 1050px;
-    width: 300px;
-    position: absolute;
-  }
-  #blob-bot1 {
-    z-index: -1;
-    top: 1050px;
-    width: 200px;
-    position: absolute;
+  svg{
+    display:none;
   }
   .d-flex {
     width: 100%;

@@ -91,8 +91,8 @@
       There are elements for sections of the page, images, text, and more
       The elements include attributes referenced in the CSS for the page style
     -->
-    <div class="container gallery-wrapper">
-        <svg
+    <div id="svgParent">
+              <svg
       id="blob-top"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
@@ -194,6 +194,9 @@
         ></animate>
       </path>
     </svg>
+    </div>
+    <div class="container gallery-wrapper">
+
       <!-- heading text -->
       <div id="qrBox">
         <img
