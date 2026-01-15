@@ -1,479 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!--
-      This is the page head - it contains info the browser uses to display the page
-      You won't see what's in the head in the page
-      Scroll down to the body element for the page content
-    -->
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 
-    <!-- 
-      This is an HTML comment
-      You can write text in a comment and the content won't be visible in the page
-    -->
+  <title>WebAR 4 Gummies</title>
 
-    <title>WebAR 4 Dummies</title>
+  <meta name="description"
+    content="A lightweight WebAR learning hub with a hands-on Playground for experimenting in the browser." />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:title" content="WebAR 4 Gummies" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description"
+    content="Learn Web AR fast with a hands-on Playground: edit HTML/CSS/JS and see results instantly." />
+  <meta name="twitter:card" content="summary" />
 
-    <!-- Meta tags for SEO and social sharing -->
-    <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
-    <meta
-      name="description"
-      content="A simple website, built with Glitch. Remix it to get your own."
-    />
-    <meta name="robots" content="index,follow" />
-    <meta property="og:title" content="WebAR 4 Dummies" />
-    <meta property="og:type" content="article" />
-    <meta
-      property="og:url"
-      content="https://shiny-guiltless-session.glitch.me/"
-    />
-    <meta
-      property="og:description"
-      content="A simple infosite to teach web AR, built with Glitch."
-    />
-    <meta
-      property="og:image"
-      content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-website-social.png?v=1616712748147"
-    />
-    <meta name="twitter:card" content="summary" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/landing.css" />
 
-    <!-- Import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/styles/style.css" />
-    <link rel="stylesheet" href="/styles/gallery.css" />
-    <link rel="stylesheet" href="/styles/model-style.css" />
-    <link rel="stylesheet" href="/styles/monokai.css" />
-    <!-- Import the webpage's javascript file -->
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://kit.fontawesome.com/74379c72d3.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="/script.js" defer></script>
-  </head>
-  <body>
-    <div class="sticky">
-      <a href="/index.html" style="text-decoration: none">
-        <h1 class="title">Web AR for Dummies <span id="emoji">😮</span></h1>
-      </a>
-      <ul>
-        <li>
-          <a href="/pages/model-viewer.html" class="underAnim">model-viewer </a>
-        </li>
-        <li><a href="/pages/Zappar.html" class="underAnim">Zappar</a></li>
-        <li><a href="/pages/8thwall.html" class="underAnim">8thwall</a></li>
-        <!--<li><a href="#Ar.js" class="underAnim">Ar.js</a></li>-->
-      </ul>
-    </div>
+  <script src="script.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js"></script>
+  <script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://unpkg.com/three@0.126.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="landing-3d.js" defer></script>
+</head>
 
-    <!-- <div id="spline">
-      <canvas id="canvas3d"></canvas>
-      <script type="module">
-      import { Application } from './runtime.js';
-      const canvas = document.getElementById('canvas3d');
-      const app = new Application(canvas); 
-    app.load('https://prod.spline.design/8L9Y8uSy8KybdQKt/scene.splinecode');
-    </script>
-    </div>-->
+<body>
+  <div class="sticky">
+    <a href="index.html" style="text-decoration: none">
+      <h1 class="title">Web AR for Gummies <span id="emoji">😮</span></h1>
+    </a>
+    <ul>
+      <li><a href="index.html" class="underAnim">Home</a></li>
+      <li><a href="pages/exercises.html" class="underAnim">Playground</a></li>
+    </ul>
+  </div>
 
-    <!--  <div id="spline-bot">
-      <canvas id="canvas3d-bot"></canvas>
-      <script type="module">
-      import { Application } from './runtime.js';
-      const canvas = document.getElementById('canvas3d-bot');
-      const app = new Application(canvas); 
-    app.load('https://prod.spline.design/fBVoJICZ1gxFX1fu/scene.splinecode');
-    </script>
-    </div>-->
-    <!--
-      This is the body of the page
-      Look at the elements and see how they appear in the rendered page on the right
-      Each element is defined using tags, with < and > indicating where each one opens and closes
-      There are elements for sections of the page, images, text, and more
-      The elements include attributes referenced in the CSS for the page style
-    -->
-    <div id="svgParent">
-      <svg
-        id="blob-top"
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-        viewbox="0 0 500 500"
-        width="100%"
-        filter="blur(0px)"
-        style="opacity: 1"
-        transform="rotate(94)"
-      >
-        <defs>
-          <lineargradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" style="stop-color: rgb(247, 190, 105)"></stop>
-            <stop offset="100%" style="stop-color: rgb(190, 105, 247)"></stop>
-          </lineargradient>
-        </defs>
-        <path id="blob" stroke="url(#gradient)">
-          <animate
-            attributename="d"
-            dur="32.9s"
-            repeatcount="indefinite"
-            values="M428.88107,298.41731Q382.87896,346.83463,343.6411,381.94757Q304.40324,417.06052,249.73188,417.66327Q195.06052,418.26602,121.90324,407.33463Q48.74595,396.40324,42.90922,323.20162Q37.07249,250,50.04223,182.03624Q63.01197,114.07249,129.2076,98.49191Q195.40324,82.91133,251.0746,78.83673Q306.74595,74.76214,356.50598,105.64321Q406.26602,136.52427,440.5746,193.26214Q474.88318,250,428.88107,298.41731Z;M439.43806,316.51312Q432.44085,383.02623,370.39398,407.14258Q308.3471,431.25893,240.13979,459.78516Q171.93248,488.31139,132.30301,426.26451Q92.67355,364.21763,63.21484,307.10882Q33.75613,250,44.06194,178.90151Q54.36774,107.80301,118.67355,75.31613Q182.97935,42.82924,240.60882,72.66602Q298.23828,102.50279,368.10882,107.87054Q437.97935,113.23828,442.20731,181.61914Q446.43527,250,439.43806,316.51312Z;M423.38828,307.00416Q406.39243,364.00831,353.55217,384.57202Q300.71191,405.13573,242.06787,430.50416Q183.42382,455.87258,116.5554,425.63666Q49.68697,395.40075,58.87581,322.70037Q68.06464,250,86.66067,197.31625Q105.2567,144.63251,148.86843,108.53648Q192.48015,72.44045,252.10019,66.13989Q311.72022,59.83933,378.54063,84.21929Q445.36105,108.59925,442.87258,179.29963Q440.38412,250,423.38828,307.00416Z;M469.34657,320.38487Q443.8468,390.76973,373.53877,402.1156Q303.23073,413.46147,238.88463,448.30757Q174.53853,483.15367,122.76833,431.6929Q70.99814,380.23213,76.84563,315.11607Q82.69313,250,78.9227,186.3071Q75.15227,122.6142,131.92223,91.73003Q188.6922,60.84587,253.2305,51.539Q317.7688,42.23213,359.5759,90.92433Q401.383,139.61653,448.11467,194.80827Q494.84633,250,469.34657,320.38487Z;M402.82336,294.74662Q372.52122,339.49324,339.45366,380.77461Q306.3861,422.05598,251.70463,416.9165Q197.02317,411.77702,159.66506,377.28619Q122.30695,342.79537,72.75579,296.39768Q23.20463,250,37.88851,178.24662Q52.57238,106.49324,117.0304,72.97924Q181.48842,39.46525,238.53957,73.79537Q295.59073,108.12549,332.49083,135.50917Q369.39092,162.89286,401.2582,206.44643Q433.12549,250,402.82336,294.74662Z;M460.19079,314.81752Q429.48296,379.63503,366.74655,397.33779Q304.01014,415.04055,238.62673,450.6401Q173.24331,486.23965,141.80231,418.853Q110.3613,351.46635,87.51337,300.73317Q64.66545,250,86.56406,198.80231Q108.46268,147.60462,149.75669,107.39355Q191.05069,67.18248,258.9189,40.41566Q326.7871,13.64883,381.21107,64.45621Q435.63503,115.26359,463.26683,182.63179Q490.89862,250,460.19079,314.81752Z;M424.84079,321.86371Q447.86386,393.72743,384.56836,431.15935Q321.27286,468.59128,248.86371,472.84107Q176.45457,477.09086,148.84107,410.1135Q121.22757,343.13614,67.95457,296.56807Q14.68157,250,76.45485,209.5685Q138.22813,169.13699,166.2505,123.59142Q194.27286,78.04585,249.70464,79.81828Q305.13643,81.59072,362.47721,103.93179Q419.818,126.27286,410.81786,188.13643Q401.81772,250,424.84079,321.86371Z;M453.70516,317.0107Q433.36186,384.02139,362.52423,381.146Q291.6866,378.27061,242.8433,399.93801Q194,421.60541,117.08118,412.14317Q40.16237,402.68093,64.29201,326.34046Q88.42165,250,109.0107,206.32693Q129.59975,162.65387,148.64317,78.76495Q167.6866,-5.12397,241.8433,20.74072Q316,46.60541,350.8433,99.17023Q385.6866,151.73505,429.86753,200.86753Q474.04846,250,453.70516,317.0107Z;M428.88107,298.41731Q382.87896,346.83463,343.6411,381.94757Q304.40324,417.06052,249.73188,417.66327Q195.06052,418.26602,121.90324,407.33463Q48.74595,396.40324,42.90922,323.20162Q37.07249,250,50.04223,182.03624Q63.01197,114.07249,129.2076,98.49191Q195.40324,82.91133,251.0746,78.83673Q306.74595,74.76214,356.50598,105.64321Q406.26602,136.52427,440.5746,193.26214Q474.88318,250,428.88107,298.41731Z"
-          ></animate>
-        </path>
-      </svg>
-      <svg
-        id="blob-top1"
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-        viewbox="0 0 500 500"
-        width="100%"
-        filter="blur(0px)"
-        style="opacity: 1"
-        transform="rotate(94)"
-      >
-        <defs>
-          <lineargradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" style="stop-color: rgb(247, 190, 105)"></stop>
-            <stop offset="100%" style="stop-color: rgb(190, 105, 247)"></stop>
-          </lineargradient>
-        </defs>
-        <path id="blob" stroke="url(#gradient)">
-          <animate
-            attributename="d"
-            dur="32.9s"
-            repeatcount="indefinite"
-            values="M428.88107,298.41731Q382.87896,346.83463,343.6411,381.94757Q304.40324,417.06052,249.73188,417.66327Q195.06052,418.26602,121.90324,407.33463Q48.74595,396.40324,42.90922,323.20162Q37.07249,250,50.04223,182.03624Q63.01197,114.07249,129.2076,98.49191Q195.40324,82.91133,251.0746,78.83673Q306.74595,74.76214,356.50598,105.64321Q406.26602,136.52427,440.5746,193.26214Q474.88318,250,428.88107,298.41731Z;M439.43806,316.51312Q432.44085,383.02623,370.39398,407.14258Q308.3471,431.25893,240.13979,459.78516Q171.93248,488.31139,132.30301,426.26451Q92.67355,364.21763,63.21484,307.10882Q33.75613,250,44.06194,178.90151Q54.36774,107.80301,118.67355,75.31613Q182.97935,42.82924,240.60882,72.66602Q298.23828,102.50279,368.10882,107.87054Q437.97935,113.23828,442.20731,181.61914Q446.43527,250,439.43806,316.51312Z;M423.38828,307.00416Q406.39243,364.00831,353.55217,384.57202Q300.71191,405.13573,242.06787,430.50416Q183.42382,455.87258,116.5554,425.63666Q49.68697,395.40075,58.87581,322.70037Q68.06464,250,86.66067,197.31625Q105.2567,144.63251,148.86843,108.53648Q192.48015,72.44045,252.10019,66.13989Q311.72022,59.83933,378.54063,84.21929Q445.36105,108.59925,442.87258,179.29963Q440.38412,250,423.38828,307.00416Z;M469.34657,320.38487Q443.8468,390.76973,373.53877,402.1156Q303.23073,413.46147,238.88463,448.30757Q174.53853,483.15367,122.76833,431.6929Q70.99814,380.23213,76.84563,315.11607Q82.69313,250,78.9227,186.3071Q75.15227,122.6142,131.92223,91.73003Q188.6922,60.84587,253.2305,51.539Q317.7688,42.23213,359.5759,90.92433Q401.383,139.61653,448.11467,194.80827Q494.84633,250,469.34657,320.38487Z;M402.82336,294.74662Q372.52122,339.49324,339.45366,380.77461Q306.3861,422.05598,251.70463,416.9165Q197.02317,411.77702,159.66506,377.28619Q122.30695,342.79537,72.75579,296.39768Q23.20463,250,37.88851,178.24662Q52.57238,106.49324,117.0304,72.97924Q181.48842,39.46525,238.53957,73.79537Q295.59073,108.12549,332.49083,135.50917Q369.39092,162.89286,401.2582,206.44643Q433.12549,250,402.82336,294.74662Z;M460.19079,314.81752Q429.48296,379.63503,366.74655,397.33779Q304.01014,415.04055,238.62673,450.6401Q173.24331,486.23965,141.80231,418.853Q110.3613,351.46635,87.51337,300.73317Q64.66545,250,86.56406,198.80231Q108.46268,147.60462,149.75669,107.39355Q191.05069,67.18248,258.9189,40.41566Q326.7871,13.64883,381.21107,64.45621Q435.63503,115.26359,463.26683,182.63179Q490.89862,250,460.19079,314.81752Z;M424.84079,321.86371Q447.86386,393.72743,384.56836,431.15935Q321.27286,468.59128,248.86371,472.84107Q176.45457,477.09086,148.84107,410.1135Q121.22757,343.13614,67.95457,296.56807Q14.68157,250,76.45485,209.5685Q138.22813,169.13699,166.2505,123.59142Q194.27286,78.04585,249.70464,79.81828Q305.13643,81.59072,362.47721,103.93179Q419.818,126.27286,410.81786,188.13643Q401.81772,250,424.84079,321.86371Z;M453.70516,317.0107Q433.36186,384.02139,362.52423,381.146Q291.6866,378.27061,242.8433,399.93801Q194,421.60541,117.08118,412.14317Q40.16237,402.68093,64.29201,326.34046Q88.42165,250,109.0107,206.32693Q129.59975,162.65387,148.64317,78.76495Q167.6866,-5.12397,241.8433,20.74072Q316,46.60541,350.8433,99.17023Q385.6866,151.73505,429.86753,200.86753Q474.04846,250,453.70516,317.0107Z;M428.88107,298.41731Q382.87896,346.83463,343.6411,381.94757Q304.40324,417.06052,249.73188,417.66327Q195.06052,418.26602,121.90324,407.33463Q48.74595,396.40324,42.90922,323.20162Q37.07249,250,50.04223,182.03624Q63.01197,114.07249,129.2076,98.49191Q195.40324,82.91133,251.0746,78.83673Q306.74595,74.76214,356.50598,105.64321Q406.26602,136.52427,440.5746,193.26214Q474.88318,250,428.88107,298.41731Z"
-          ></animate>
-        </path>
-      </svg>
+  <main class="landing">
+    <section class="hero">
+      <div class="landing-section">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <!-- <p class="hero-kicker">Neo‑Brutalist WebAR</p> -->
+            <h1 class="hero-title">Build Web AR in your browser.</h1>
+            <p class="hero-subtitle">
+              Learn the basics fast with a hands‑on playground: <br>
+              edit HTML/CSS/JS, hit Run, and see results instantly. <br>
+              No installs. Just loud borders and even louder results.
+            </p>
 
-      <svg
-        id="blob-bot"
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 500 500"
-        width="100%"
-        id="blobSvg"
-        transform="rotate(111)"
-        style="opacity: 1"
-      >
-        <defs>
-          <linearGradient id="gradient2" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" style="stop-color: rgb(200, 0, 255)"></stop>
-            <stop offset="100%" style="stop-color: rgb(240, 0, 104)"></stop>
-          </linearGradient>
-        </defs>
-        <path id="blob" stroke="url(#gradient2)">
-          <animate
-            attributeName="d"
-            dur="33.3s"
-            repeatCount="indefinite"
-            values="M402.96858,305.89372Q383.43068,361.78743,330.92976,387.4658Q278.42884,413.14418,202.60721,438.39372Q126.78558,463.64325,93.53789,391.42791Q60.29021,319.21257,78.64603,256.64233Q97.00185,194.07209,128.64418,144.10813Q160.28651,94.14418,219.21534,92.06839Q278.14418,89.9926,343.5342,103.10536Q408.92421,116.21812,415.71534,183.10906Q422.50647,250,402.96858,305.89372Z;M404.21696,312.89783Q400.5999,375.79567,344.18719,420.60848Q287.77447,465.42129,222.25959,438.51488Q156.7447,411.60848,114.36806,363.06382Q71.99143,314.51917,65.98083,247.80853Q59.97023,181.09788,105.72982,130.10217Q151.4894,79.10645,216.18088,77.25959Q280.87235,75.41272,335.88295,103.82341Q390.89355,132.2341,399.36378,191.11705Q407.83401,250,404.21696,312.89783Z;M433.0232,309.9192Q393.01281,369.83841,338.3352,406.40881Q283.6576,442.97921,221.7752,424.49281Q159.8928,406.0064,119.2384,358.9864Q78.584,311.9664,70.5304,246.7752Q62.4768,181.584,97.7552,114.4464Q133.0336,47.3088,206.208,64.61119Q279.3824,81.91359,342.208,100.8192Q405.0336,119.7248,439.0336,184.8624Q473.0336,250,433.0232,309.9192Z;M428.39652,310.63781Q395.12039,371.27562,337.58607,396.3189Q280.05174,421.36219,204.00896,441.94775Q127.96619,462.5333,107.32787,385.81839Q86.68955,309.10348,96.33581,253.18955Q105.98207,197.27562,134.68904,148.26665Q163.396,99.25769,224.43929,74.05174Q285.48258,48.8458,334.83632,93.40548Q384.19006,137.96516,422.93135,193.98258Q461.67264,250,428.39652,310.63781Z;M414.53769,321.38989Q420.37096,392.77979,350.00938,405.59743Q279.64779,418.41507,213.62261,422.99375Q147.59743,427.57242,94.94338,376.434Q42.28934,325.29559,42.19191,249.67298Q42.09448,174.05036,91.48437,117.78308Q140.87426,61.5158,214.61636,47.15422Q288.35846,32.79263,348.05974,75.5158Q407.76103,118.23897,408.23272,184.11949Q408.70441,250,414.53769,321.38989Z;M425.57934,323.79599Q426.22734,397.59197,355.10104,419.41516Q283.97474,441.23834,222.29242,423.00907Q160.6101,404.77979,95.49644,367.33031Q30.38277,329.88083,44.58128,255.13536Q58.77979,180.3899,99.7419,120.41159Q140.70401,60.43329,214.57221,45.49287Q288.44042,30.55246,350.61367,72.29792Q412.78692,114.04339,418.85914,182.0217Q424.93135,250,425.57934,323.79599Z;M419.06254,317.79517Q411.11118,385.59033,349.66843,425.59894Q288.22568,465.60755,228.34547,428.45831Q168.46526,391.30906,120.24124,353.19622Q72.01722,315.08338,69.86103,249.40801Q67.70483,183.73263,103.47221,120.73263Q139.23958,57.73263,215.36631,36.75347Q291.49305,15.77432,346.41495,69.35242Q401.33686,122.93051,414.17538,186.46526Q427.0139,250,419.06254,317.79517Z;M402.96858,305.89372Q383.43068,361.78743,330.92976,387.4658Q278.42884,413.14418,202.60721,438.39372Q126.78558,463.64325,93.53789,391.42791Q60.29021,319.21257,78.64603,256.64233Q97.00185,194.07209,128.64418,144.10813Q160.28651,94.14418,219.21534,92.06839Q278.14418,89.9926,343.5342,103.10536Q408.92421,116.21812,415.71534,183.10906Q422.50647,250,402.96858,305.89372Z"
-          ></animate>
-        </path>
-      </svg>
-      <svg
-        id="blob-bot1"
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 500 500"
-        width="100%"
-        id="blobSvg"
-        transform="rotate(111)"
-        style="opacity: 1"
-      >
-        <defs>
-          <linearGradient id="gradient2" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" style="stop-color: rgb(200, 0, 255)"></stop>
-            <stop offset="100%" style="stop-color: rgb(240, 0, 104)"></stop>
-          </linearGradient>
-        </defs>
-        <path id="blob" stroke="url(#gradient2)">
-          <animate
-            attributeName="d"
-            dur="33.3s"
-            repeatCount="indefinite"
-            values="M402.96858,305.89372Q383.43068,361.78743,330.92976,387.4658Q278.42884,413.14418,202.60721,438.39372Q126.78558,463.64325,93.53789,391.42791Q60.29021,319.21257,78.64603,256.64233Q97.00185,194.07209,128.64418,144.10813Q160.28651,94.14418,219.21534,92.06839Q278.14418,89.9926,343.5342,103.10536Q408.92421,116.21812,415.71534,183.10906Q422.50647,250,402.96858,305.89372Z;M404.21696,312.89783Q400.5999,375.79567,344.18719,420.60848Q287.77447,465.42129,222.25959,438.51488Q156.7447,411.60848,114.36806,363.06382Q71.99143,314.51917,65.98083,247.80853Q59.97023,181.09788,105.72982,130.10217Q151.4894,79.10645,216.18088,77.25959Q280.87235,75.41272,335.88295,103.82341Q390.89355,132.2341,399.36378,191.11705Q407.83401,250,404.21696,312.89783Z;M433.0232,309.9192Q393.01281,369.83841,338.3352,406.40881Q283.6576,442.97921,221.7752,424.49281Q159.8928,406.0064,119.2384,358.9864Q78.584,311.9664,70.5304,246.7752Q62.4768,181.584,97.7552,114.4464Q133.0336,47.3088,206.208,64.61119Q279.3824,81.91359,342.208,100.8192Q405.0336,119.7248,439.0336,184.8624Q473.0336,250,433.0232,309.9192Z;M428.39652,310.63781Q395.12039,371.27562,337.58607,396.3189Q280.05174,421.36219,204.00896,441.94775Q127.96619,462.5333,107.32787,385.81839Q86.68955,309.10348,96.33581,253.18955Q105.98207,197.27562,134.68904,148.26665Q163.396,99.25769,224.43929,74.05174Q285.48258,48.8458,334.83632,93.40548Q384.19006,137.96516,422.93135,193.98258Q461.67264,250,428.39652,310.63781Z;M414.53769,321.38989Q420.37096,392.77979,350.00938,405.59743Q279.64779,418.41507,213.62261,422.99375Q147.59743,427.57242,94.94338,376.434Q42.28934,325.29559,42.19191,249.67298Q42.09448,174.05036,91.48437,117.78308Q140.87426,61.5158,214.61636,47.15422Q288.35846,32.79263,348.05974,75.5158Q407.76103,118.23897,408.23272,184.11949Q408.70441,250,414.53769,321.38989Z;M425.57934,323.79599Q426.22734,397.59197,355.10104,419.41516Q283.97474,441.23834,222.29242,423.00907Q160.6101,404.77979,95.49644,367.33031Q30.38277,329.88083,44.58128,255.13536Q58.77979,180.3899,99.7419,120.41159Q140.70401,60.43329,214.57221,45.49287Q288.44042,30.55246,350.61367,72.29792Q412.78692,114.04339,418.85914,182.0217Q424.93135,250,425.57934,323.79599Z;M419.06254,317.79517Q411.11118,385.59033,349.66843,425.59894Q288.22568,465.60755,228.34547,428.45831Q168.46526,391.30906,120.24124,353.19622Q72.01722,315.08338,69.86103,249.40801Q67.70483,183.73263,103.47221,120.73263Q139.23958,57.73263,215.36631,36.75347Q291.49305,15.77432,346.41495,69.35242Q401.33686,122.93051,414.17538,186.46526Q427.0139,250,419.06254,317.79517Z;M402.96858,305.89372Q383.43068,361.78743,330.92976,387.4658Q278.42884,413.14418,202.60721,438.39372Q126.78558,463.64325,93.53789,391.42791Q60.29021,319.21257,78.64603,256.64233Q97.00185,194.07209,128.64418,144.10813Q160.28651,94.14418,219.21534,92.06839Q278.14418,89.9926,343.5342,103.10536Q408.92421,116.21812,415.71534,183.10906Q422.50647,250,402.96858,305.89372Z"
-          ></animate>
-        </path>
-      </svg>
-    </div>
-    <div class="container gallery-wrapper">
-      <!-- heading text -->
-      <div id="qrBox">
-        <img
-          id="qrCode"
-          src="https://cdn.glitch.global/5071cd64-d9ab-4d35-9f8c-a1da345381fe/unitag_qrcode_standard%20(1).png"
-          class="imageO"
-          alt="qr illustration"
-        />
-      </div>
-      <div class="image-gallery">
-        <div class="column">
-          <div class="image-item">
-            <img
-              src="https://media.giphy.com/media/w4fxPaeRE4s3lwbps4/giphy.gif"
-              class="illustration"
-              alt="Editor illustration"
-              title="Click the image!"
-            />
-          </div>
-          <!-- other items here -->
-        </div>
-        <div class="column">
-          <!-- other items here -->
-          <div class="image-item">
-            <div id="mViewer" class="illustration">
-              <model-viewer
-                bounds="tight"
-                enable-pan
-                src="https://cdn.glitch.global/5071cd64-d9ab-4d35-9f8c-a1da345381fe/scene%20(1).glb"
-                camera-controls
-                environment-image="neutral"
-                shadow-intensity="1"
-                autoplay
-              >
-                <div class="progress-bar hide" slot="progress-bar">
-                  <div class="update-bar"></div>
-                </div>
-                <button slot="ar-button" id="ar-button">
-                  View in your space
-                </button>
-              </model-viewer>
+            <div class="hero-cta">
+              <a class="nb-btn nb-btn--primary" href="pages/exercises.html">Open Playground →</a>
+              <a class="nb-btn" href="#learn">Start Learning ↓</a>
             </div>
+
+            <!-- <div class="nb-chip-row" aria-label="Highlights">
+              <span class="nb-chip">A‑Frame</span>
+              <span class="nb-chip">model-viewer</span>
+              <span class="nb-chip">Sandboxed Preview</span>
+              <span class="nb-chip">Light/Dark Theme</span>
+            </div> -->
           </div>
-          <div id="amz-sneaks" class="image-item">
-            <img
-              src="https://cdn.glitch.global/5071cd64-d9ab-4d35-9f8c-a1da345381fe/gp-nike-1654786905.gif"
-              class="illustration"
-              alt="Editor illustration"
-              title="Click the image!"
-            />
+
+          <div class="hero-3d" aria-label="3D hero">
+            <canvas id="hero-canvas" class="hero-3d-canvas webgl"></canvas>
+            <!-- <div class="hero-3d-overlay" aria-hidden="true">
+              <div class="hero-sticker hero-sticker--top">Drag / hover</div>
+              <div class="hero-sticker hero-sticker--bottom">3D • WebGL</div>
+            </div> -->
           </div>
-        </div>
-        <div class="column">
-          <!-- other items here -->
-          <div class="image-item">
-            <img
-              src="https://media.giphy.com/media/YOlV0TjEfVsm3JSKNW/giphy.gif"
-              class="illustration"
-              alt="Editor illustration"
-              title="Click the image!"
-            />
-          </div>
-          <!-- <div class="image-item">
-            <img
-              src="https://media.giphy.com/media/w4fxPaeRE4s3lwbps4/giphy.gif"
-              class="illustration"
-              alt="Editor illustration"
-              title="Click the image!"
-            />
-          </div>-->
         </div>
       </div>
+    </section>
+
+    <section class="cards" id="learn">
+      <div class="landing-section">
+        <h2 class="section-title">What you’ll do</h2>
+        <div class="card-grid">
+          <div class="nb-card">
+            <h3>1) Learn the pieces</h3>
+            <p class="small">HTML, CSS, JS — plus the AR-friendly 3D basics (models, lighting, scale).</p>
+          </div>
+          <div class="nb-card">
+            <h3>2) Edit + run</h3>
+            <p class="small">Use the Playground editor to iterate like a mini IDE: code on one side, result on the
+              other.</p>
+          </div>
+          <div class="nb-card">
+            <h3>3) Ship it</h3>
+            <p class="small">Keep it static-host friendly. Learn patterns that work on GitHub Pages.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="prereqs" id="prerequisites">
+      <div class="landing-section">
+        <h2 class="section-title">Prerequisites</h2>
+        <div class="prereq-grid">
+          <div class="nb-card">
+            <h3>What you need</h3>
+            <ol class="prereq-list">
+              <li>A modern browser with WebGL enabled (Chrome / Edge / Safari).</li>
+              <li>For mobile AR, serve over HTTPS (or use <span class="prereq-mono">localhost</span> while testing
+                locally).</li>
+              <li>
+                <span class="prereq-mono">&lt;model-viewer&gt;</span> AR handoff:
+                Android uses Scene Viewer (Chrome), iOS uses Quick Look (Safari).
+              </li>
+            </ol>
+          </div>
+
+          <div class="nb-card">
+            <h3>Quick fixes</h3>
+            <ol class="prereq-list">
+              <li>If the 3D hero is blank, check DevTools → Console for script errors.</li>
+              <li>Ad blockers can block CDNs; try disabling them for this site.</li>
+              <li>If AR buttons don’t appear on mobile, confirm you’re on HTTPS.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="strip">
+      <div class="landing-section">
+        <div class="strip-inner">
+          <div>
+            <h2 class="section-title" style="margin: 0 0 6px">Ready to start?</h2>
+            <div class="small">Open an exercise and tweak code live. Your progress saves locally in the browser.</div>
+          </div>
+          <a class="nb-btn nb-btn--primary" href="pages/exercises.html">Go to Playground →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="links"></div>
+    <div class="footer-actions">
+      <button type="button" onclick="topFunction()" id="hoverBtn" title="Go to top"></button>
+      <a id="dev" class="a_demo_four" target="_top" href="https://linktr.ee/ambrielm3">🕹️&lt;DEV&gt;</a>
     </div>
+  </footer>
+</body>
 
-    <!-- The wrapper and content divs set margins and positioning -->
-    <div id="main" class="wrapper">
-      <div class="instructions">
-        <h2>Prerequisites <span class="blink">!important;</span></h2>
-
-        To get started with web AR, <strong>HTML CSS &#38; Js</strong>
-        act as the base. Play games to brush-up your web development skills or
-        learn about it through
-        <strong>
-          <a
-            href="https://tutorialzine.com/2016/05/10-fun-browser-games-for-learning-web-development"
-          >
-            coding games</a
-          >. </strong
-        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
-        Multiple resources can be found at...
-        <ol>
-          1.
-          <a href="https://www.w3schools.com/whatis/">W3Schools.com</a
-          ><br />
-          2.
-          <a
-            href="https://learndigital.withgoogle.com/digitalgarage/course/web-developer"
-            >Google web developer</a
-          ><br />
-          3.
-          <a href="https://developer.mozilla.org/en-US/docs/Learn">MDN Web</a
-          ><br />
-          4.
-          <a
-            href="https://docs.microsoft.com/en-us/learn/paths/web-development-101/"
-            >Microsoft</a
-          ><br />
-          5.
-          <a
-            href="https://www.geeksforgeeks.org/can-start-learn-web-development/"
-            >GeeksForGeeks</a
-          ><br />
-          6.
-          <a href="https://www.codecademy.com/learn/paths/web-development"
-            >Codecademy</a
-          ><br />
-        </ol>
-        and many more resources and courses are available on the internet.
-      </div>
-      <!-- Instructions on using this project -->
-      <div class="instructions">
-        <h2>
-          Getting Started <span style="font-size: 1em" class="blink">🧙🏼</span>
-        </h2>
-        <p>
-          <strong>Select a Framework</strong> which will define the structure
-          for your AR project. You can use it to build your first AR. Some
-          prominent web AR supporting
-          <br />
-          frameworks are as follows
-        </p>
-        <ol>
-          1.
-          <a href="https://threejs.org/">Three.js</a
-          ><br />
-          2.
-          <a href="https://aframe.io/">A-Frame</a
-          ><br />
-          3.
-          <a href="https://playcanvas.com/">PlayCanvas</a
-          ><br />
-          4.
-          <a href="https://www.babylonjs.com/">Babylon.js</a
-          ><br />
-          5.
-          <a href="https://modelviewer.dev/">&lt;model-viewer&gt;</a
-          ><br />
-        </ol>
-
-        <strong>Select a development framework</strong> to be used to create web
-        AR projects. You can use any IDE for your web AR developments. Web AR is
-        supported on all major&emsp;&emsp;
-        <br />
-        JS development frameworks like
-        <a href="https://www.javascript.com/">JavaScript</a>,
-        <a href="https://reactjs.org/">React</a>,
-        <a href="https://angularjs.org/">Angular</a>, etc.
-        <br />
-        <br />
-        <strong>integrated development environment (IDE)</strong>
-        <ol>
-          1.
-          <a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a
-          ><br />
-          2.
-          <a href="https://code.visualstudio.com/">VS Code</a
-          ><br />
-          3.
-          <a href="https://glitch.com/">Glitch</a
-          ><br /><br />
-          Platforms like
-          <a href="https://playcanvas.com/">PlayCanvas</a
-          >,
-          <a href="https://www.8thwall.com/">8th Wall</a
-          >, etc. provide an in built cloud-editor as well as support for
-          self-hosted projects.
-        </ol>
-        <!-- Once you've added the button from the readme, click it in the page -->
-        <!-- Check out the function in script.js to see how it works -->
-      </div>
-      <div class="instructions">
-        <h2>#A-frame <span class="blink">!important;</span></h2>
-        <a href="https://aframe.io/">
-          <img
-            src="https://docs.zap.works/static/v-98093788/img/uar/a-frame/a-frame.png"
-            width="130px"
-            height="150px"
-          />
-        </a>
-        <br />
-        We will be extensively using <strong>A-frame</strong> across multiple
-        web AR platforms. Therefore lets get into understanding the basic
-        structure in creating an A-frame scene.
-        <br />
-        <br />
-        <strong>A typical A-frame structure looks like</strong> <br /><br />
-        <div class="content extern">
-          <script src="https://gist.github.com/mihirm3hub/7739c5804cae092e7977b7834f0b1f06.js"></script>
-        </div>
-        - All the contents of the A-frame scene are nested inside the main
-        'a-scene tag'.<br />
-        - objects/contents are defined as 'a-entities' inside the a-scene
-        tag.<br />
-        - There are some predefined entities like a-box, a-sphere, a-cylinder,
-        etc.<br />
-        - The entities have properties which influence the entity parameters
-        like color, position, material, etc.<br />
-        - The scene structure is similar to HTML structure.<br />
-        <br />
-        <strong>A-frame web AR structure</strong><br /><br />
-        <div class="content extern">
-          <script src="https://gist.github.com/mihirm3hub/0134be54ebebedfb08ff867ac9a125db.js"></script>
-        </div><br />
-        <strong><i>structural breakdown</i></strong><br />
-        - All the contents of the A-frame scene are nested inside the main
-        'a-scene tag'.<br />
-        - objects/contents are defined as 'a-entities' inside the a-scene
-        tag.<br />
-        - There are some predefined entities like a-box, a-sphere, a-cylinder,
-        etc.<br />
-        - The entities have properties which influence the entity parameters
-        like color, position, material, etc.<br />
-        - The scene structure is similar to HTML structure.<br />
-        <br />
-        <strong>More A-frame resources</strong>
-        <ol>
-          1.
-          <a href="https://aframe.io/docs/1.3.0/introduction/">A-frame Docs</a
-          ><br />
-          2.
-          <a
-            href="https://www.youtube.com/channel/UCK2U85UiKw45EBAUS1YU85Q/featured"
-            >Danilo Pasquariello's YouTube channel</a
-          ><br />
-          3.
-          <a href="https://github.com/aframevr/aframe/">A-frame GitHub</a
-          ><br />
-          4.
-          <a href="https://www.codecademy.com/learn/learn-a-frame"
-            >CodeCademy: Learn-a-frame</a
-          ><br />
-          5.
-          <a
-            href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame"
-            >MDN: Building a basic demo with A-frame</a
-          ><br />
-          6.
-          <a href="https://jgbarah.github.io/aframe-playground/"
-            >A-frame Playground</a
-          ><br />
-        </ol>
-        and many more resources and courses are available on the internet.
-      </div>
-    </div>
-    <button onclick="topFunction()" id="hoverBtn" title="Go to top"></button>
-    <!-- The footer holds our remix button — you can use it for structure or cut it out ✂ -->
-    <footer class="footer">
-      <div class="links"></div>
-      <a
-        id="dev"
-        class="a_demo_four"
-        target="_top"
-        href="https://linktr.ee/ambrielm3"
-      >
-        🕹️&lt;DEV&gt;
-      </a>
-    </footer>
-    <!-- Import the component -->
-    <script
-      type="module"
-      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
-    ></script>
-  </body>
 </html>

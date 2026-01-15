@@ -1,30 +1,75 @@
-# Hello website!
+# WebAR 4 Gummies
 
-This is a basic HTML starter project you can build on however you like. No need to save. While you develop your site, your changes will happen ✨ immediately in the preview window. On the left you'll see the files that make up your site, including HTML, JavaScript, and CSS. You can upload assets like images or audio in `assets`. The rest is up to you and your imagination. 🦄
+A static, front-end-only Playground for learning WebAR concepts by editing code in the browser and previewing results instantly.
 
-## What's in this project?
+The Playground currently focuses on:
 
-← `README.md`: That's this file, where you can tell people what your cool website does and how you built it.
+- A-Frame basics
+- Google's `<model-viewer>` for device-native AR (WebXR / Scene Viewer / Quick Look)
 
-← `index.html`: This is the main web page for your site. The HTML defines the structure and content of the page using _elements_. You'll see references in the HTML to the JS and CSS files. Try clicking the image in the center of the page!
+## What’s included
 
-← `style.css`: CSS files add styling rules to your content. The CSS applies styles to the elements in your HTML page. The style rules also make the image move when you click it.
+- Theme toggle (light/dark) persisted in localStorage
+- Playground: in-browser editor + sandboxed iframe preview (templates are stored in each exercise page)
+- QR modal on exercise pages (for quick “open on phone” testing)
+- Landing page 3D hero (Three.js + a gummy GLB)
 
-← `script.js`: If you're feeling fancy you can add interactivity to your site with JavaScript. The code in the JavaScript file runs when the page loads, and when the visitor clicks the button you can add below.
+## Prerequisites
 
-Open each file and check out the comments (in gray) for more info.
+- A modern browser with WebGL enabled (Chrome / Edge / Safari).
+- For AR features on mobile: serve the site over HTTPS (or use `localhost` for local testing).
+- For the `model-viewer` AR button:
+	- Android: Google Scene Viewer (Chrome)
+	- iOS: AR Quick Look (Safari)
 
-## Try this next 🏗️
+## Run locally
 
-Take a look in `TODO.md` for next steps you can try out in your new site!
+This is plain HTML/CSS/JS. Any static server works.
 
-___Want a minimal version of this project to build your own website? Check out [Blank Website](https://glitch.com/edit/#!/remix/glitch-blank-website)!___
+- Python: `python -m http.server 8080`
+- Node: `npx serve .`
 
-![Glitch](https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2FLogo_Color.svg?v=1602781328576)
+Then open `http://localhost:8080/`.
 
-## You built this with Glitch!
+## Dependency notes
 
-[Glitch](https://glitch.com) is a friendly community where millions of people come together to build web apps and websites.
+- This project is intentionally “no build step” (plain HTML/CSS/JS).
+- Some pages load libraries from CDNs (A-Frame, `<model-viewer>`, Three.js). If a CDN is blocked (ad blockers / corporate Wi‑Fi), those pages may fail.
+- The Playground persists edits in localStorage. If you’re not seeing your latest template updates, clear site storage or use a new browser profile.
 
-- Need more help? [Check out our Help Center](https://help.glitch.com/) for answers to any common questions.
-- Ready to make it official? [Become a paid Glitch member](https://glitch.com/pricing) to boost your app with private sharing, more storage and memory, domains and more.
+## Key files
+
+- `index.html`: landing page + 3D hero
+- `exercise.js`: Playground engine (editor + iframe preview + localStorage persistence/migrations)
+- `pages/exercises.html`: Playground entry point
+- `script.js`: copy-to-clipboard helpers + UI behavior
+- `landing-3d.js`: Three.js hero setup + gummy GLB loading
+- `styles/`: shared + per-page CSS
+
+## Playground notes
+
+- Entry point: `pages/exercises.html`
+- Each Playground exercise page (in `pages/playground/`) contains one or more templates stored as JSON in the HTML.
+- User edits are saved per page in localStorage (so template fixes may need migration code in `exercise.js`).
+
+## Deploy
+
+### GitHub Pages (recommended)
+
+This repo includes a GitHub Actions workflow that deploys the site to GitHub Pages on every push to the `main` branch.
+
+1. Push this repo to GitHub (if you haven’t already).
+2. In GitHub: **Settings → Pages**
+3. Under **Build and deployment**, select **Source: GitHub Actions**.
+4. Push to `main` — the workflow will publish the site.
+
+### Other static hosts
+
+You can also host this folder on any static host (Netlify, Vercel static, S3, etc.).
+
+## TODO
+
+See `TODO.md` for the live checklist. Current highlights:
+
+1. Replace external gist embeds with local snippets (optional) for fully-offline usage.
+2. Add a minimal “live demo” section per framework (not just instructions).

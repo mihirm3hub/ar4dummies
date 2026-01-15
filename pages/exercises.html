@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+
+  <title>WebAR 4 Gummies • Playground</title>
+
+  <meta name="description" content="Hands-on WebAR playground: edit HTML/CSS/JS and see results instantly." />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:title" content="WebAR 4 Gummies • Playground" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="Hands-on WebAR playground with an in-browser editor + live preview." />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/playground.css" />
+
+  <script src="https://kit.fontawesome.com/74379c72d3.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <script src="../script.js" defer></script>
+</head>
+
+<body>
+  <div class="sticky">
+    <a href="../index.html" style="text-decoration: none">
+      <h1 class="title">Web AR for Gummies <span id="emoji">😮</span></h1>
+    </a>
+    <ul>
+      <li><a href="../index.html" class="underAnim">Home</a></li>
+      <li><a href="../pages/exercises.html" class="underAnim">Playground</a></li>
+    </ul>
+  </div>
+
+  <div id="main" class="wrapper" style="margin-top: 7rem">
+    <div class="instructions">
+      <h2>
+        Getting Started <span style="font-size: 1em" class="blink">🧙🏼</span>
+      </h2>
+      <p>
+        <strong>Select a Framework</strong> which will define the structure
+        for your AR project. You can use it to build your first AR. Some
+        prominent web AR supporting
+        <br />
+        frameworks are as follows
+      </p>
+      <ol>
+        1.
+        <a href="https://threejs.org/">Three.js</a><br />
+        2.
+        <a href="https://aframe.io/">A-Frame</a><br />
+        3.
+        <a href="https://playcanvas.com/">PlayCanvas</a><br />
+        4.
+        <a href="https://www.babylonjs.com/">Babylon.js</a><br />
+        5.
+        <a href="https://modelviewer.dev/">&lt;model-viewer&gt;</a><br />
+      </ol>
+
+      <strong>Select a development framework</strong> to be used to create web
+      AR projects. You can use any IDE for your web AR developments. Web AR is
+      supported on all major&emsp;&emsp;
+      <br />
+      JS development frameworks like
+      <a href="https://www.javascript.com/">JavaScript</a>,
+      <a href="https://reactjs.org/">React</a>,
+      <a href="https://angularjs.org/">Angular</a>, etc.
+      <br />
+      <br />
+      <strong>integrated development environment (IDE)</strong>
+      <ol>
+        1.
+        <a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a><br />
+        2.
+        <a href="https://code.visualstudio.com/">VS Code</a><br />
+        3.
+        <a href="https://glitch.com/">Glitch</a><br /><br />
+        Platforms like
+        <a href="https://playcanvas.com/">PlayCanvas</a>,
+        etc. provide an in built cloud-editor as well as support for self-hosted projects.
+      </ol>
+    </div>
+
+    <div class="instructions">
+      <h2>Playground <span class="blink">!important;</span></h2>
+      <p>
+        Pick a module, then choose an exercise. The in-browser editor opens on a separate page.
+      </p>
+
+      <div class="module-picker">
+        <div class="module-grid">
+          <details class="module-card">
+            <summary>
+              <span class="module-title">
+                <span class="name">A-Frame</span>
+                <span class="desc">Scenes, entities, animation, click/keys</span>
+              </span>
+              <span class="module-chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="module-body">
+              <ol class="module-exercises">
+                <li>
+                  <a class="underAnim" href="../pages/playground/aframe-1-spin.html">
+                    <span class="exercise-tag">1</span> Spin + color
+                  </a>
+                </li>
+                <li>
+                  <a class="underAnim" href="../pages/playground/aframe-2-click.html">
+                    <span class="exercise-tag">2</span> Click to toggle scale
+                  </a>
+                </li>
+                <li>
+                  <a class="underAnim" href="../pages/playground/aframe-3-position.html">
+                    <span class="exercise-tag">3</span> Move with keys
+                  </a>
+                </li>
+              </ol>
+            </div>
+          </details>
+
+          <details class="module-card">
+            <summary>
+              <span class="module-title">
+                <span class="name">model-viewer</span>
+                <span class="desc">GLB viewer, AR button, lighting, hotspots</span>
+              </span>
+              <span class="module-chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="module-body">
+              <ol class="module-exercises">
+                <li>
+                  <a class="underAnim" href="../pages/playground/modelviewer-1-card.html">
+                    <span class="exercise-tag">1</span> Custom card + AR button
+                  </a>
+                </li>
+                <li>
+                  <a class="underAnim" href="../pages/playground/modelviewer-2-lighting.html">
+                    <span class="exercise-tag">2</span> Lighting + exposure
+                  </a>
+                </li>
+                <li>
+                  <a class="underAnim" href="../pages/playground/modelviewer-3-annotations.html">
+                    <span class="exercise-tag">3</span> Hotspots
+                  </a>
+                </li>
+              </ol>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="links"></div>
+    <div class="footer-actions">
+      <button type="button" onclick="topFunction()" id="hoverBtn" title="Go to top"></button>
+      <a id="dev" class="a_demo_four" target="_top" href="https://linktr.ee/ambrielm3">
+        🕹️&lt;DEV&gt;
+      </a>
+    </div>
+  </footer>
+</body>
+
+</html>

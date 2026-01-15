@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../../assets/favicon.svg" />
+  <title>model-viewer Exercise 2 — Lighting + exposure</title>
+
+  <link rel="stylesheet" href="../../styles/style.css" />
+  <link rel="stylesheet" href="../../styles/exercise.css" />
+
+  <script src="../../script.js" defer></script>
+  <script src="../../exercise.js" defer></script>
+</head>
+
+<body>
+  <div class="sticky">
+    <a href="../../index.html" style="text-decoration: none">
+      <h1 class="title">Web AR for Gummies <span id="emoji">😮</span></h1>
+    </a>
+    <ul>
+      <li><a href="../../index.html" class="underAnim">Home</a></li>
+      <li><a href="../../pages/exercises.html" class="underAnim">Playground</a></li>
+    </ul>
+  </div>
+
+  <div id="main" class="wrapper" style="margin-top: 7rem">
+    <button
+      type="button"
+      id="ex-menu-btn"
+      class="exercise-menu-btn"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="ex-menu"
+    ></button>
+
+    <div class="exercise-menu" id="ex-menu">
+      <div class="exercise-menu-backdrop"></div>
+      <div class="exercise-menu-panel" role="dialog" aria-modal="true" aria-label="Exercise menu">
+        <div class="exercise-menu-head">
+          <div class="exercise-menu-title">Menu</div>
+          <button type="button" id="ex-menu-close" class="exercise-menu-close" aria-label="Close menu">×</button>
+        </div>
+
+        <h3>model-viewer Exercises</h3>
+        <nav class="exercise-nav" aria-label="model-viewer exercise navigation">
+          <a href="./modelviewer-1-card.html">1. Card + AR button</a>
+          <a class="is-active" href="./modelviewer-2-lighting.html">2. Lighting + exposure</a>
+          <a href="./modelviewer-3-annotations.html">3. Hotspots</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="exercise-workspace exercise">
+      <section class="exercise-panel exercise-instructions">
+        <div class="exercise-panel-header">Instructions</div>
+        <div class="exercise-panel-body">
+          <h2 class="exercise-goal">model-viewer — Exercise 2: Lighting + exposure</h2>
+          <p>
+            Goal: change the lighting feel by adjusting exposure and shadow intensity.
+          </p>
+          <div class="exercise-note" id="ex-description"></div>
+        </div>
+      </section>
+
+      <section class="exercise-panel exercise-code">
+        <div class="exercise-panel-header">
+          <div>Code</div>
+          <div class="exercise-toolbar">
+            <button type="button" class="exercise-btn" id="ex-run">Run</button>
+            <button type="button" class="exercise-btn" id="ex-reset">Reset</button>
+            <button type="button" class="exercise-btn" id="ex-open">Open</button>
+          </div>
+        </div>
+        <div class="exercise-panel-body">
+          <div id="ex-templates" class="exercise-toolbar" aria-label="Templates"></div>
+        </div>
+
+        <div class="exercise-code-layout">
+          <div class="exercise-files" aria-label="Files">
+            <h4>Files</h4>
+            <button type="button" class="exercise-file is-active" data-ex-file="html">index.html</button>
+            <button type="button" class="exercise-file" data-ex-file="css">styles.css</button>
+            <button type="button" class="exercise-file" data-ex-file="js">script.js</button>
+          </div>
+
+          <div class="exercise-editors">
+            <div class="exercise-editor is-active" data-ex-editor="html">
+              <div class="exercise-editor-header">HTML</div>
+              <textarea id="ex-html" spellcheck="false"></textarea>
+            </div>
+            <div class="exercise-editor" data-ex-editor="css">
+              <div class="exercise-editor-header">CSS</div>
+              <textarea id="ex-css" spellcheck="false"></textarea>
+            </div>
+            <div class="exercise-editor" data-ex-editor="js">
+              <div class="exercise-editor-header">JS</div>
+              <textarea id="ex-js" spellcheck="false"></textarea>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="exercise-result-wrap">
+        <section class="exercise-panel exercise-result">
+          <div class="exercise-panel-header">Result</div>
+          <div class="exercise-preview-wrap">
+            <iframe
+              id="ex-frame"
+              title="Exercise preview"
+              sandbox="allow-scripts allow-pointer-lock allow-modals"
+              referrerpolicy="no-referrer"
+            ></iframe>
+          </div>
+        </section>
+        <div class="exercise-result-actions" id="qr-slot"></div>
+      </div>
+    </div>
+
+    <script id="webar-exercise-templates" type="application/json">
+        [
+          {
+            "id": "modelviewer-2-lighting",
+            "title": "model-viewer: Lighting + exposure",
+            "description": "Tasks: \n(1) Set exposure to a higher value. \n(2) Reduce shadow-intensity. \n(3) Add a UI button that toggles between two lighting presets.",
+            "libs": {"aframe": false, "modelViewer": true},
+            "html": "<div class=\"wrap\">\n  <div class=\"bar\">\n    <button id=\"toggle\">Toggle lighting</button>\n  </div>\n\n  <model-viewer\n    id=\"mv\"\n    src=\"https://noir-nft.s3.ap-south-1.amazonaws.com/red_gummy_bear.glb\"\n    ar\n    ar-modes=\"webxr scene-viewer quick-look\"\n    camera-controls\n    shadow-intensity=\"1\"\n    environment-image=\"neutral\"\n    autoplay\n  ></model-viewer>\n</div>\n",
+            "css": "html, body { height: 100%; margin: 0; font-family: system-ui, sans-serif; }\n.wrap { padding: 12px; }\n.bar { margin-bottom: 10px; }\nbutton { padding: 10px 14px; border-radius: 12px; border: 2px solid #000; background: #fff; font-weight: 700; }\nmodel-viewer { width: 100%; height: 70vh; background: #f3f3f3; border-radius: 12px; }\n",
+            "js": "const mv = document.querySelector('#mv');\nconst btn = document.querySelector('#toggle');\n\n// TODO 1/2: set your default lighting values\n// Example: mv.setAttribute('exposure', '1.2');\n// Example: mv.setAttribute('shadow-intensity', '0.4');\n\nlet bright = false;\nbtn?.addEventListener('click', () => {\n  bright = !bright;\n\n  // TODO 3: toggle between two presets\n  // Try: exposure 1.3 + shadow 0.35 vs exposure 0.9 + shadow 0.8\n  mv?.setAttribute('exposure', bright ? '1.3' : '0.9');\n  mv?.setAttribute('shadow-intensity', bright ? '0.35' : '0.8');\n});\n"
+          }
+        ]
+      </script>
+  </div>
+
+  <footer class="footer">
+    <div class="links"></div>
+    <div class="footer-actions">
+      <button type="button" onclick="topFunction()" id="hoverBtn" title="Go to top"></button>
+      <a id="dev" class="a_demo_four" target="_top" href="https://linktr.ee/ambrielm3">
+        🕹️&lt;DEV&gt;
+      </a>
+    </div>
+  </footer>
+</body>
+
+</html>
